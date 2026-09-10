@@ -830,16 +830,16 @@
     ],
     "views": "3.58K",
     "github_links": [
+      "https://github.com/ali77gh/PersianToolsCli",
       "https://github.com/persian-tools/rust-persian-tools",
-      "https://github.com/ali77gh/PersianToolsWeb",
-      "https://github.com/ali77gh/PersianToolsCli"
+      "https://github.com/ali77gh/PersianToolsWeb"
     ],
     "tags": [],
     "primary_repo": "persian-tools/rust-persian-tools",
     "repo_names": [
-      "ali77gh/PersianToolsCli",
+      "persian-tools/rust-persian-tools",
       "ali77gh/PersianToolsWeb",
-      "persian-tools/rust-persian-tools"
+      "ali77gh/PersianToolsCli"
     ],
     "authors": [
       "persian-tools",
@@ -9647,14 +9647,14 @@
     "photos": [],
     "views": "4.6K",
     "github_links": [
-      "https://github.com/keyaruga33/pasban-py",
-      "https://github.com/keyaruga33/pasban_db"
+      "https://github.com/keyaruga33/pasban_db",
+      "https://github.com/keyaruga33/pasban-py"
     ],
     "tags": [],
     "primary_repo": "keyaruga33/pasban_db",
     "repo_names": [
-      "keyaruga33/pasban_db",
-      "keyaruga33/pasban-py"
+      "keyaruga33/pasban-py",
+      "keyaruga33/pasban_db"
     ],
     "authors": [
       "keyaruga33"
@@ -15938,8 +15938,8 @@
     ],
     "views": "2.91K",
     "github_links": [
-      "https://github.com/mostafa-kheibary/tehran-metro-data",
-      "https://github.com/Ryan-PG/ry-teh-metro-nav"
+      "https://github.com/Ryan-PG/ry-teh-metro-nav",
+      "https://github.com/mostafa-kheibary/tehran-metro-data"
     ],
     "tags": [],
     "primary_repo": "Ryan-PG/ry-teh-metro-nav",
@@ -16899,8 +16899,8 @@
     "tags": [],
     "primary_repo": "httpie/cli",
     "repo_names": [
-      "httpie/cli",
-      "httpie/desktop"
+      "httpie/desktop",
+      "httpie/cli"
     ],
     "authors": [
       "httpie"
@@ -18001,14 +18001,14 @@
     "photos": [],
     "views": "2.19K",
     "github_links": [
-      "https://github.com/AvenCores/open-antigravity-patcher.git",
-      "https://github.com/AvenCores/open-antigravity-patcher"
+      "https://github.com/AvenCores/open-antigravity-patcher",
+      "https://github.com/AvenCores/open-antigravity-patcher.git"
     ],
     "tags": [],
     "primary_repo": "AvenCores/open-antigravity-patcher.git",
     "repo_names": [
-      "AvenCores/open-antigravity-patcher",
-      "AvenCores/open-antigravity-patcher.git"
+      "AvenCores/open-antigravity-patcher.git",
+      "AvenCores/open-antigravity-patcher"
     ],
     "authors": [
       "AvenCores"
