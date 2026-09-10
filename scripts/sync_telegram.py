@@ -1,8 +1,12 @@
 import json
 import os
 import re
+import ssl
 import urllib.request
 from bs4 import BeautifulSoup
+
+# Create unverified context for environments with local proxies/custom CA cert chains
+ctx = ssl._create_unverified_context()
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -21,7 +25,7 @@ def sync_channel():
         target_url = f'{url}?before={before}' if before else url
         req = urllib.request.Request(target_url, headers=headers)
         try:
-            with urllib.request.urlopen(req) as resp:
+            with urllib.request.urlopen(req, context=ctx) as resp:
                 html = resp.read().decode('utf-8')
         except Exception as e:
             print(f'Error fetching {target_url}: {e}')
@@ -74,13 +78,23 @@ def sync_channel():
             
             tags = re.findall(r'#([A-Za-z0-9_\u0600-\u06FF]+)', text_plain)
             
-            # Repos extraction
+            # Repos & authors extraction
             repo_names = []
+            authors = []
+            repo_details = []
             for link in gh_links:
                 match = re.search(r'github\.com/([a-zA-Z0-9_\-\.]+)/([a-zA-Z0-9_\-\.]+)', link)
                 if match:
                     owner, repo = match.group(1), match.group(2)
-                    repo_names.append(f'{owner}/{repo}')
+                    if owner.lower() not in ['features', 'topics', 'trending', 'collections', 'events', 'about']:
+                        repo_names.append(f'{owner}/{repo}')
+                        authors.append(owner)
+                        repo_details.append({
+                            'owner': owner,
+                            'repo': repo,
+                            'full_name': f'{owner}/{repo}',
+                            'url': link
+                        })
             
             # Clean title
             lines = [l.strip() for l in text_plain.split('\n') if l.strip()]
@@ -124,6 +138,9 @@ def sync_channel():
                 'tags': list(set(tags)),
                 'primary_repo': repo_names[0] if repo_names else None,
                 'repo_names': list(set(repo_names)),
+                'authors': list(dict.fromkeys(authors)),
+                'primary_author': authors[0] if authors else None,
+                'repo_details': repo_details,
                 'categories': detected_cats
             })
             batch_new += 1
@@ -132,14 +149,17 @@ def sync_channel():
             break
         before = min_id
 
-    all_posts.sort(key=lambda x: x['id'], reverse=True)
-    with open('data/posts.json', 'w', encoding='utf-8') as f:
-        json.dump(all_posts, f, ensure_ascii=False, indent=2)
-        
-    with open('src/posts_data.json', 'w', encoding='utf-8') as f:
-        json.dump(all_posts, f, ensure_ascii=False, indent=2)
-        
-    print(f'Successfully synced {len(all_posts)} posts.')
+    if all_posts:
+        all_posts.sort(key=lambda x: x['id'], reverse=True)
+        with open('data/posts.json', 'w', encoding='utf-8') as f:
+            json.dump(all_posts, f, ensure_ascii=False, indent=2)
+            
+        with open('src/posts_data.json', 'w', encoding='utf-8') as f:
+            json.dump(all_posts, f, ensure_ascii=False, indent=2)
+            
+        print(f'Successfully synced {len(all_posts)} posts.')
+    else:
+        print('No posts fetched, keeping existing data.')
 
 if __name__ == '__main__':
     sync_channel()
