@@ -8,18 +8,25 @@ import {
   Tag, 
   Calendar, 
   Eye, 
-  Sparkles, 
   FolderGit2, 
   Moon, 
   Sun,
   X,
-  Filter,
   CheckCircle2,
   Copy,
   ChevronLeft,
   ChevronRight,
-  GitBranch
+  GitBranch,
+  Users,
+  LayoutGrid
 } from 'lucide-react';
+
+interface RepoDetail {
+  owner: string;
+  repo: string;
+  full_name: string;
+  url: string;
+}
 
 interface Post {
   id: number;
@@ -27,21 +34,26 @@ interface Post {
   url: string;
   datetime: string;
   title: string;
-  title_clean: string;
+  title_clean?: string;
   text_html: string;
   text_plain: string;
   photos: string[];
   views: string;
   github_links: string[];
   tags: string[];
-  primary_repo: string | null;
-  repo_names: string[];
-  categories: string[];
+  primary_repo?: string | null;
+  repo_names?: string[];
+  categories?: string[];
+  authors?: string[];
+  primary_author?: string | null;
+  repo_details?: RepoDetail[];
 }
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState<'all' | 'categories' | 'creators'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('همه');
+  const [selectedCreator, setSelectedCreator] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [hasGithubOnly, setHasGithubOnly] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -52,22 +64,83 @@ export default function App() {
   const posts = postsRaw as Post[];
   const postsPerPage = 12;
 
-  // Extract all categories and count
+  // Process and ensure fields
+  const processedPosts = useMemo(() => {
+    return posts.map(p => {
+      const text = p.text_plain || '';
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+      const titleClean = p.title_clean || (lines.length > 0 ? (lines[0].length > 100 ? lines[0].substring(0, 97) + '...' : lines[0]) : 'بدون عنوان');
+      
+      let cats = p.categories || [];
+      if (!cats || cats.length === 0) {
+        const keywords: Record<string, string[]> = {
+          'AI & هوش مصنوعی': ['هوش مصنوعی', 'llm', 'gpt', 'ai', 'مدل', 'openai', 'ollama', 'یادگیری ماشین'],
+          'ابزار توسعه (DevTools)': ['cli', 'devtools', 'ابزار', 'ترمینال', 'گیت', 'docker', 'داکر', 'کد'],
+          'فرانت‌اند & وب': ['react', 'vue', 'frontend', 'فرانت', 'css', 'html', 'javascript', 'typescript', 'وب'],
+          'بک‌اند & سرور': ['backend', 'پایتون', 'python', 'golang', 'rust', 'سرور', 'api', 'دیتابیس', 'db', 'node'],
+          'امنیت & شبکه': ['فیلترشکن', 'پروکسی', 'v2ray', 'امنیت', 'vpn', 'dns', 'tunnel', 'شبکه', 'proxy'],
+          'سیستم عامل & لینوکس': ['لینوکس', 'linux', 'سیستم عامل', 'ویندوز', 'mac', 'ابونتو'],
+          'ربات & تلگرام': ['تلگرام', 'telegram', 'bot', 'ربات']
+        };
+        const textLower = text.toLowerCase();
+        const detected = [];
+        for (const [cat, kws] of Object.entries(keywords)) {
+          if (kws.some(kw => textLower.includes(kw))) {
+            detected.push(cat);
+          }
+        }
+        cats = detected.length > 0 ? detected : ['سایر پروژه‌ها'];
+      }
+
+      const authors = p.authors || [];
+      return {
+        ...p,
+        title_clean: titleClean,
+        categories: cats,
+        authors: authors
+      };
+    });
+  }, [posts]);
+
+  // Category stats
   const categoryStats = useMemo(() => {
-    const stats: Record<string, number> = { 'همه': posts.length };
-    posts.forEach(p => {
+    const stats: Record<string, number> = { 'همه': processedPosts.length };
+    processedPosts.forEach(p => {
       p.categories.forEach(cat => {
         stats[cat] = (stats[cat] || 0) + 1;
       });
     });
     return stats;
-  }, [posts]);
+  }, [processedPosts]);
 
-  // Extract all tags
+  // Creator stats
+  const creatorStats = useMemo(() => {
+    const map: Record<string, { count: number; avatar: string; repos: string[] }> = {};
+    processedPosts.forEach(p => {
+      (p.authors || []).forEach(author => {
+        if (!map[author]) {
+          map[author] = {
+            count: 0,
+            avatar: `https://github.com/${author}.png?size=96`,
+            repos: []
+          };
+        }
+        map[author].count += 1;
+        if (p.primary_repo && !map[author].repos.includes(p.primary_repo)) {
+          map[author].repos.push(p.primary_repo);
+        }
+      });
+    });
+    return Object.entries(map)
+      .map(([name, data]) => ({ name, ...data }))
+      .sort((a, b) => b.count - a.count);
+  }, [processedPosts]);
+
+  // Top tags
   const topTags = useMemo(() => {
     const tagCounts: Record<string, number> = {};
-    posts.forEach(p => {
-      p.tags.forEach(t => {
+    processedPosts.forEach(p => {
+      (p.tags || []).forEach(t => {
         tagCounts[t] = (tagCounts[t] || 0) + 1;
       });
     });
@@ -75,13 +148,18 @@ export default function App() {
       .sort((a, b) => b[1] - a[1])
       .slice(0, 15)
       .map(([tag]) => tag);
-  }, [posts]);
+  }, [processedPosts]);
 
   // Filtered posts
   const filteredPosts = useMemo(() => {
-    return posts.filter(post => {
+    return processedPosts.filter(post => {
       // Category filter
       if (selectedCategory !== 'همه' && !post.categories.includes(selectedCategory)) {
+        return false;
+      }
+
+      // Creator filter
+      if (selectedCreator && !(post.authors || []).includes(selectedCreator)) {
         return false;
       }
 
@@ -98,23 +176,24 @@ export default function App() {
       // Search query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
-        const inTitle = post.title_clean.toLowerCase().includes(q);
+        const inTitle = (post.title_clean || '').toLowerCase().includes(q);
         const inText = post.text_plain.toLowerCase().includes(q);
-        const inRepo = post.repo_names.some(r => r.toLowerCase().includes(q));
-        const inTags = post.tags.some(t => t.toLowerCase().includes(q));
-        if (!inTitle && !inText && !inRepo && !inTags) {
+        const inRepo = (post.repo_names || []).some(r => r.toLowerCase().includes(q));
+        const inAuthor = (post.authors || []).some(a => a.toLowerCase().includes(q));
+        const inTags = (post.tags || []).some(t => t.toLowerCase().includes(q));
+        if (!inTitle && !inText && !inRepo && !inAuthor && !inTags) {
           return false;
         }
       }
 
       return true;
     });
-  }, [posts, selectedCategory, selectedTag, hasGithubOnly, searchQuery]);
+  }, [processedPosts, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, searchQuery]);
 
-  // Reset page when filters change
+  // Reset page on filter change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedCategory, selectedTag, hasGithubOnly]);
+  }, [searchQuery, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, activeTab]);
 
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
   const currentPosts = useMemo(() => {
@@ -165,10 +244,10 @@ export default function App() {
                   RepoFA
                 </h1>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-medium">
-                  Persian GitHub Hub
+                  پایگاه ریپازیتوری‌های فارسی
                 </span>
               </div>
-              <p className="text-xs text-slate-400">آرشیو و کاوشگر جامع پروژه‌های اوپن‌سورس فارسی</p>
+              <p className="text-xs text-slate-400">آرشیو و کاوشگر جامع پروژه‌های اوپن‌سورس و توسعه‌دهندگان</p>
             </div>
           </div>
 
@@ -202,30 +281,88 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/80 text-xs text-slate-300 mb-6 shadow-inner">
-          <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
-          <span>مرجع کشف و معرفی بیش از ۵۰۰ ریپازیتوری کاربردی و بومی</span>
+      {/* Main Tabs Navigation */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="flex items-center justify-center">
+          <div className={`p-1.5 rounded-2xl border flex items-center gap-1 shadow-lg ${darkMode ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200'}`}>
+            <button
+              onClick={() => {
+                setActiveTab('all');
+                setSelectedCategory('همه');
+                setSelectedCreator(null);
+              }}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                activeTab === 'all'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <LayoutGrid className="w-4 h-4" />
+              <span>همه پروژه‌ها ({processedPosts.length})</span>
+            </button>
+
+            <button
+              onClick={() => {
+                setActiveTab('categories');
+                setSelectedCreator(null);
+              }}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                activeTab === 'categories'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <Layers className="w-4 h-4" />
+              <span>دسته‌بندی موضوعی ({Object.keys(categoryStats).length - 1})</span>
+            </button>
+
+            <button
+              onClick={() => {
+                setActiveTab('creators');
+                setSelectedCategory('همه');
+              }}
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
+                activeTab === 'creators'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <Users className="w-4 h-4" />
+              <span>تفکیک افراد و توسعه‌دهندگان ({creatorStats.length})</span>
+            </button>
+          </div>
         </div>
-        
-        <h2 className="text-3xl sm:text-5xl font-black tracking-tight mb-4 leading-tight">
-          کاوش در دنیای <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-indigo-500 bg-clip-text text-transparent">ریپازیتوری‌های برتر</span>
-        </h2>
-        
-        <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-400 mb-8 leading-relaxed">
-          تمام ابزارها، اسکریپت‌ها، کتابخانه‌ها و پروژه‌های اوپن‌سورس معرفی شده در کانال تلگرامی RepoFA با جستجوی هوشمند و دسته‌بندی موضوعی.
-        </p>
+      </div>
+
+      {/* Hero & Search Section */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 text-center">
+        {selectedCreator && (
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold mb-4 animate-fade-in">
+            <img 
+              src={`https://github.com/${selectedCreator}.png?size=48`} 
+              alt={selectedCreator} 
+              className="w-6 h-6 rounded-full border border-cyan-400"
+              onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+            />
+            <span>فیلتر بر اساس پروژه‌های توسعه‌دهنده: {selectedCreator}</span>
+            <button 
+              onClick={() => setSelectedCreator(null)}
+              className="p-1 hover:bg-cyan-500/20 rounded-lg text-cyan-300"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        )}
 
         {/* Big Search Bar */}
-        <div className="max-w-3xl mx-auto relative mb-8">
+        <div className="max-w-3xl mx-auto relative mb-6">
           <div className="relative flex items-center">
             <Search className="absolute right-4 w-5 h-5 text-slate-400 pointer-events-none" />
             <input 
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="جستجو در نام ریپازیتوری، توضیحات، تگ یا کلیدواژه..."
+              placeholder="جستجو در نام پروژه‌ها، توسعه‌دهندگان، توضیحات یا هشتگ‌ها..."
               className={`w-full pr-12 pl-12 py-4 rounded-2xl text-base font-medium outline-none transition-all duration-200 shadow-xl ${
                 darkMode 
                   ? 'bg-slate-900/90 border border-slate-700/80 text-slate-100 placeholder:text-slate-500 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10' 
@@ -242,12 +379,8 @@ export default function App() {
             )}
           </div>
 
-          {/* Quick Filters */}
-          <div className="flex flex-wrap items-center justify-between gap-3 mt-4 text-xs">
+          <div className="flex flex-wrap items-center justify-between gap-3 mt-3 text-xs">
             <div className="flex items-center gap-2">
-              <span className="text-slate-400 flex items-center gap-1 font-medium">
-                <Filter className="w-3.5 h-3.5" /> فیلتر سریع:
-              </span>
               <button
                 onClick={() => setHasGithubOnly(!hasGithubOnly)}
                 className={`px-3 py-1.5 rounded-lg border transition-all flex items-center gap-1.5 ${
@@ -257,48 +390,112 @@ export default function App() {
                 }`}
               >
                 <GitBranch className="w-3.5 h-3.5" />
-                <span>دارای لینک گیت‌هاب</span>
+                <span>فقط دارای مخزن گیت‌هاب</span>
               </button>
             </div>
 
             <div className="text-slate-400 font-medium">
-              نمایش <span className="text-cyan-400 font-bold">{filteredPosts.length}</span> مورد از {posts.length} پست
+              نمایش <span className="text-cyan-400 font-bold">{filteredPosts.length}</span> پروژه یافت‌شده
             </div>
           </div>
         </div>
 
-        {/* Category Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto mb-6">
-          {Object.entries(categoryStats).map(([cat, count]) => {
-            const isSelected = selectedCategory === cat;
-            return (
-              <button
-                key={cat}
-                onClick={() => {
-                  setSelectedCategory(cat);
-                  setSelectedTag(null);
-                }}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all duration-150 flex items-center gap-1.5 ${
-                  isSelected 
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20 font-bold scale-105' 
-                    : darkMode 
-                      ? 'bg-slate-900/80 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700' 
-                      : 'bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300'
-                }`}
-              >
-                <Layers className="w-3 h-3" />
-                <span>{cat}</span>
-                <span className={`px-1.5 py-0.2 rounded-md text-[10px] ${isSelected ? 'bg-black/20 text-white' : 'bg-slate-800 text-slate-400'}`}>
-                  {count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
+        {/* Categories Tab Content */}
+        {activeTab === 'categories' && (
+          <div className="max-w-4xl mx-auto mb-8 animate-fade-in">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+              {Object.entries(categoryStats).filter(([cat]) => cat !== 'همه').map(([cat, count]) => {
+                const isSelected = selectedCategory === cat;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => {
+                      setSelectedCategory(isSelected ? 'همه' : cat);
+                      setSelectedTag(null);
+                    }}
+                    className={`p-4 rounded-2xl border text-right transition-all flex flex-col justify-between ${
+                      isSelected 
+                        ? 'bg-gradient-to-br from-cyan-600 to-blue-700 text-white border-cyan-400 shadow-lg shadow-cyan-500/20 scale-[1.02]' 
+                        : darkMode 
+                          ? 'bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300' 
+                          : 'bg-white border-slate-200 hover:border-slate-300 text-slate-700'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <Layers className={`w-5 h-5 ${isSelected ? 'text-white' : 'text-cyan-400'}`} />
+                      <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${isSelected ? 'bg-black/20 text-white' : 'bg-slate-800 text-cyan-400'}`}>
+                        {count} ریپو
+                      </span>
+                    </div>
+                    <span className="font-bold text-sm">{cat}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
-        {/* Top Tags List */}
+        {/* Creators Tab Content */}
+        {activeTab === 'creators' && (
+          <div className="max-w-6xl mx-auto mb-10 text-right animate-fade-in">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-sm font-bold text-slate-300 flex items-center gap-2">
+                <Users className="w-4 h-4 text-cyan-400" />
+                توسعه‌دهندگان و سازمان‌های فعال (کلیک برای فیلتر پروژه‌ها):
+              </h3>
+              {selectedCreator && (
+                <button
+                  onClick={() => setSelectedCreator(null)}
+                  className="text-xs text-cyan-400 hover:underline"
+                >
+                  نمایش پروژه‌های همه افراد
+                </button>
+              )}
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              {creatorStats.slice(0, 36).map(creator => {
+                const isSelected = selectedCreator === creator.name;
+                return (
+                  <button
+                    key={creator.name}
+                    onClick={() => {
+                      setSelectedCreator(isSelected ? null : creator.name);
+                    }}
+                    className={`p-3 rounded-2xl border text-center transition-all flex flex-col items-center gap-2 group ${
+                      isSelected
+                        ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-md ring-2 ring-cyan-500/30'
+                        : darkMode
+                          ? 'bg-slate-900/70 border-slate-800 hover:border-slate-700 text-slate-300 hover:bg-slate-900'
+                          : 'bg-white border-slate-200 hover:border-slate-300 text-slate-700'
+                    }`}
+                  >
+                    <div className="relative">
+                      <img 
+                        src={creator.avatar} 
+                        alt={creator.name} 
+                        className="w-12 h-12 rounded-full border border-slate-700 object-cover group-hover:scale-105 transition-transform"
+                        onError={(e) => {
+                          (e.target as HTMLElement).style.display = 'none';
+                        }}
+                      />
+                      <span className="absolute -bottom-1 -right-1 px-1.5 py-0.2 rounded-full bg-cyan-500 text-slate-950 font-mono text-[10px] font-black shadow">
+                        {creator.count}
+                      </span>
+                    </div>
+                    <span className="text-xs font-mono font-medium truncate w-full text-center" title={creator.name}>
+                      {creator.name}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Tags bar */}
         {topTags.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-3xl mx-auto mb-10">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-3xl mx-auto mb-8">
             <span className="text-slate-500 text-xs flex items-center gap-1 ml-2">
               <Tag className="w-3 h-3" /> هشتگ‌ها:
             </span>
@@ -328,11 +525,12 @@ export default function App() {
           <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800/80 max-w-md mx-auto">
             <FolderGit2 className="w-12 h-12 text-slate-600 mx-auto mb-4 animate-bounce" />
             <h3 className="text-base font-bold text-slate-300 mb-1">هیچ پروژه‌ای با این مشخصات یافت نشد</h3>
-            <p className="text-xs text-slate-500 mb-4">عبارت جستجو یا فیلترها را تغییر دهید.</p>
+            <p className="text-xs text-slate-500 mb-4">عبارت جستجو، فیلتر فرد یا دسته‌بندی را تغییر دهید.</p>
             <button
               onClick={() => {
                 setSearchQuery('');
                 setSelectedCategory('همه');
+                setSelectedCreator(null);
                 setSelectedTag(null);
                 setHasGithubOnly(false);
               }}
@@ -353,18 +551,17 @@ export default function App() {
                       : 'bg-white border-slate-200 hover:border-cyan-400 hover:shadow-cyan-500/5'
                   }`}
                 >
-                  {/* Card Media Preview (if exists) */}
+                  {/* Media Preview */}
                   {post.photos && post.photos.length > 0 && (
                     <div className="relative h-44 overflow-hidden bg-slate-950">
                       <img 
                         src={post.photos[0]} 
-                        alt={post.title_clean} 
+                        alt={post.title_clean || ''} 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
                       
-                      {/* Badge on Photo */}
                       {post.primary_repo && (
                         <div className="absolute bottom-3 right-3 left-3 flex items-center justify-between">
                           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-xs font-mono font-medium text-cyan-300 border border-slate-800">
@@ -376,19 +573,23 @@ export default function App() {
                     </div>
                   )}
 
-                  {/* Card Body */}
+                  {/* Body */}
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      {/* Top Badges & Meta */}
+                      {/* Meta badges */}
                       <div className="flex items-center justify-between gap-2 mb-3 text-xs">
                         <div className="flex flex-wrap gap-1.5">
-                          {post.categories.slice(0, 2).map(cat => (
-                            <span 
+                          {(post.categories || []).slice(0, 2).map(cat => (
+                            <button 
                               key={cat}
-                              className="px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-[11px] font-medium"
+                              onClick={() => {
+                                setSelectedCategory(cat);
+                                setActiveTab('categories');
+                              }}
+                              className="px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20 text-[11px] font-medium transition-colors"
                             >
                               {cat}
-                            </span>
+                            </button>
                           ))}
                         </div>
                         <div className="flex items-center gap-1 text-slate-500 text-[11px]">
@@ -405,6 +606,33 @@ export default function App() {
                         {post.title_clean}
                       </h3>
 
+                      {/* Creators badge inside card */}
+                      {post.authors && post.authors.length > 0 && (
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="text-[11px] text-slate-500">توسعه‌دهنده:</span>
+                          <div className="flex flex-wrap gap-1">
+                            {post.authors.map(author => (
+                              <button
+                                key={author}
+                                onClick={() => {
+                                  setSelectedCreator(author);
+                                  setActiveTab('creators');
+                                }}
+                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-800/80 hover:bg-slate-700 text-cyan-300 font-mono text-[11px] border border-slate-700 transition-colors"
+                              >
+                                <img 
+                                  src={`https://github.com/${author}.png?size=24`} 
+                                  alt="" 
+                                  className="w-3.5 h-3.5 rounded-full"
+                                  onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
+                                />
+                                <span>{author}</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
                       {/* Snippet */}
                       <p className="text-xs text-slate-400 line-clamp-3 leading-relaxed mb-4">
                         {post.text_plain}
@@ -414,7 +642,7 @@ export default function App() {
                     {/* Footer Actions */}
                     <div className="pt-4 border-t border-slate-800/60 mt-auto">
                       {/* Tags */}
-                      {post.tags.length > 0 && (
+                      {post.tags && post.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1 mb-3">
                           {post.tags.slice(0, 3).map(tag => (
                             <button
@@ -430,7 +658,7 @@ export default function App() {
 
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
-                          {post.github_links.length > 0 ? (
+                          {post.github_links && post.github_links.length > 0 ? (
                             <a
                               href={post.github_links[0]}
                               target="_blank"
@@ -442,7 +670,7 @@ export default function App() {
                               <ExternalLink className="w-3 h-3 opacity-60" />
                             </a>
                           ) : (
-                            <span className="text-[11px] text-slate-500 italic">بدون ریپو اختصاصی</span>
+                            <span className="text-[11px] text-slate-500 italic">بدون ریپو</span>
                           )}
 
                           <button
@@ -550,7 +778,7 @@ export default function App() {
                 <div className="rounded-2xl overflow-hidden border border-slate-800 max-h-72 bg-slate-950">
                   <img 
                     src={selectedPost.photos[0]} 
-                    alt={selectedPost.title_clean} 
+                    alt={selectedPost.title_clean || ''} 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -562,10 +790,24 @@ export default function App() {
 
               {/* Badges & Meta */}
               <div className="flex flex-wrap items-center gap-2 text-xs">
-                {selectedPost.categories.map(cat => (
+                {(selectedPost.categories || []).map(cat => (
                   <span key={cat} className="px-2.5 py-1 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-medium">
                     {cat}
                   </span>
+                ))}
+                {selectedPost.authors && selectedPost.authors.map(author => (
+                  <button
+                    key={author}
+                    onClick={() => {
+                      setSelectedCreator(author);
+                      setActiveTab('creators');
+                      setSelectedPost(null);
+                    }}
+                    className="px-2.5 py-1 rounded-lg bg-slate-800 text-cyan-300 border border-slate-700 flex items-center gap-1 font-mono hover:bg-slate-700 transition-colors"
+                  >
+                    <Users className="w-3 h-3" />
+                    <span>توسعه‌دهنده: {author}</span>
+                  </button>
                 ))}
                 <span className="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-400 border border-slate-700 flex items-center gap-1">
                   <Calendar className="w-3 h-3" />
@@ -585,7 +827,7 @@ export default function App() {
               </div>
 
               {/* GitHub Links Box */}
-              {selectedPost.github_links.length > 0 && (
+              {selectedPost.github_links && selectedPost.github_links.length > 0 && (
                 <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-800/30 space-y-2">
                   <div className="text-xs font-bold text-cyan-400 flex items-center gap-1.5">
                     <GitBranch className="w-4 h-4" />
