@@ -757,7 +757,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/olya71YVEk00v8C_a3UlFGXPeRSH6GAfASHSUHwh95awSPE349Qvmp2WUxmEAws4xd8Jh_wa9uHkmNplSGP43iqL73cdTB7KkGN4RHNjvdorGcDtqXynzH8rfLwmtnVHyMO3F-q-btoJBgB4gooHGIa6BuLtweINnk8ZV5EITfU3RnnEp9op7b3sYc7p4LDK8ZELpsEX1vBFJKSyciwy0MjuBceV6ZIRs7-zWJKpX_lafYkXKO6uRw53rHf3NYIreuiP2h3QZyGuKairJYQ5jGGNkUHCKCCxihIkMZIQypYW1IsfmCLbMewFxwhMaC_ggz2jabLZTP7fNXAjTaNeXA.jpg"
     ],
-    "views": "3.57K",
+    "views": "3.58K",
     "github_links": [
       "https://github.com/NVIDIA/Personal-AI-Router"
     ],
@@ -837,15 +837,15 @@
     "views": "3.58K",
     "github_links": [
       "https://github.com/ali77gh/PersianToolsWeb",
-      "https://github.com/persian-tools/rust-persian-tools",
-      "https://github.com/ali77gh/PersianToolsCli"
+      "https://github.com/ali77gh/PersianToolsCli",
+      "https://github.com/persian-tools/rust-persian-tools"
     ],
     "tags": [],
     "primary_repo": "persian-tools/rust-persian-tools",
     "repo_names": [
-      "ali77gh/PersianToolsWeb",
       "ali77gh/PersianToolsCli",
-      "persian-tools/rust-persian-tools"
+      "persian-tools/rust-persian-tools",
+      "ali77gh/PersianToolsWeb"
     ],
     "authors": [
       "persian-tools",
@@ -3238,8 +3238,8 @@
     ],
     "views": "4.16K",
     "github_links": [
-      "https://github.com/upscayl/upscayl/releases/tag/v2.15.0",
-      "https://github.com/upscayl/upscayl"
+      "https://github.com/upscayl/upscayl",
+      "https://github.com/upscayl/upscayl/releases/tag/v2.15.0"
     ],
     "tags": [],
     "primary_repo": "upscayl/upscayl",
@@ -9810,8 +9810,8 @@
     "tags": [],
     "primary_repo": "keyaruga33/pasban_db",
     "repo_names": [
-      "keyaruga33/pasban_db",
-      "keyaruga33/pasban-py"
+      "keyaruga33/pasban-py",
+      "keyaruga33/pasban_db"
     ],
     "authors": [
       "keyaruga33"
@@ -16184,14 +16184,14 @@
     ],
     "views": "2.91K",
     "github_links": [
-      "https://github.com/Ryan-PG/ry-teh-metro-nav",
-      "https://github.com/mostafa-kheibary/tehran-metro-data"
+      "https://github.com/mostafa-kheibary/tehran-metro-data",
+      "https://github.com/Ryan-PG/ry-teh-metro-nav"
     ],
     "tags": [],
     "primary_repo": "Ryan-PG/ry-teh-metro-nav",
     "repo_names": [
-      "mostafa-kheibary/tehran-metro-data",
-      "Ryan-PG/ry-teh-metro-nav"
+      "Ryan-PG/ry-teh-metro-nav",
+      "mostafa-kheibary/tehran-metro-data"
     ],
     "authors": [
       "Ryan-PG",
@@ -17160,14 +17160,14 @@
     ],
     "views": "2.17K",
     "github_links": [
-      "https://github.com/httpie/cli",
-      "https://github.com/httpie/desktop"
+      "https://github.com/httpie/desktop",
+      "https://github.com/httpie/cli"
     ],
     "tags": [],
     "primary_repo": "httpie/cli",
     "repo_names": [
-      "httpie/desktop",
-      "httpie/cli"
+      "httpie/cli",
+      "httpie/desktop"
     ],
     "authors": [
       "httpie"
@@ -18284,14 +18284,14 @@
     "photos": [],
     "views": "2.19K",
     "github_links": [
-      "https://github.com/AvenCores/open-antigravity-patcher.git",
-      "https://github.com/AvenCores/open-antigravity-patcher"
+      "https://github.com/AvenCores/open-antigravity-patcher",
+      "https://github.com/AvenCores/open-antigravity-patcher.git"
     ],
     "tags": [],
     "primary_repo": "AvenCores/open-antigravity-patcher.git",
     "repo_names": [
-      "AvenCores/open-antigravity-patcher.git",
-      "AvenCores/open-antigravity-patcher"
+      "AvenCores/open-antigravity-patcher",
+      "AvenCores/open-antigravity-patcher.git"
     ],
     "authors": [
       "AvenCores"
