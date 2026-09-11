@@ -30,7 +30,11 @@ import {
   Database, 
   Grid,
   MessageCircle,
-  Sparkles
+  Sparkles,
+  Star,
+  Clock,
+  ArrowUpDown,
+  GitFork
 } from 'lucide-react';
 
 interface RepoDetail {
@@ -59,7 +63,12 @@ interface Post {
   authors?: string[];
   primary_author?: string | null;
   repo_details?: RepoDetail[];
+  stars?: number;
+  forks?: number;
+  language?: string | null;
 }
+
+type SortOption = 'stars' | 'latest' | 'views';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -67,6 +76,8 @@ export default function App() {
   const [selectedCreator, setSelectedCreator] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [hasGithubOnly, setHasGithubOnly] = useState<boolean>(false);
+  const [minStars, setMinStars] = useState<number>(0);
+  const [sortBy, setSortBy] = useState<SortOption>('stars');
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
   const [creatorProfileModal, setCreatorProfileModal] = useState<string | null>(null);
@@ -107,6 +118,20 @@ export default function App() {
     return `https://opengraph.githubassets.com/1/RepoFA/RepoFA.github.io`;
   };
 
+  // Format star counts (e.g., 1.2k, 15.4k)
+  const formatStars = (num: number) => {
+    if (!num) return '0';
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    }
+    return num.toString();
+  };
+
+  // Latest 6 fresh projects for Carousel
+  const latestPosts = useMemo(() => {
+    return [...posts].sort((a, b) => b.id - a.id).slice(0, 8);
+  }, [posts]);
+
   // Category stats
   const categoryStats = useMemo(() => {
     const stats: Record<string, number> = { 'همه': posts.length };
@@ -120,18 +145,20 @@ export default function App() {
 
   // Creator stats & profiles mapping
   const creatorStats = useMemo(() => {
-    const map: Record<string, { count: number; avatar: string; repos: string[]; posts: Post[] }> = {};
+    const map: Record<string, { count: number; totalStars: number; avatar: string; repos: string[]; posts: Post[] }> = {};
     posts.forEach(p => {
       (p.authors || []).forEach(author => {
         if (!map[author]) {
           map[author] = {
             count: 0,
+            totalStars: 0,
             avatar: `https://github.com/${author}.png?size=120`,
             repos: [],
             posts: []
           };
         }
         map[author].count += 1;
+        map[author].totalStars += (p.stars || 0);
         map[author].posts.push(p);
         if (p.primary_repo && !map[author].repos.includes(p.primary_repo)) {
           map[author].repos.push(p.primary_repo);
@@ -162,9 +189,9 @@ export default function App() {
       .map(([tag]) => tag);
   }, [posts]);
 
-  // Filtered posts
+  // Filtered & Sorted posts
   const filteredPosts = useMemo(() => {
-    return posts.filter(post => {
+    const filtered = posts.filter(post => {
       // Category filter
       if (selectedCategory !== 'همه' && !(post.categories || []).includes(selectedCategory)) {
         return false;
@@ -185,6 +212,11 @@ export default function App() {
         return false;
       }
 
+      // Minimum Stars filter
+      if (minStars > 0 && (post.stars || 0) < minStars) {
+        return false;
+      }
+
       // Search query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
@@ -200,12 +232,29 @@ export default function App() {
 
       return true;
     });
-  }, [posts, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, searchQuery]);
+
+    // Sorting (Default: Stars descending)
+    return filtered.sort((a, b) => {
+      if (sortBy === 'stars') {
+        const starsA = a.stars || 0;
+        const starsB = b.stars || 0;
+        if (starsB !== starsA) return starsB - starsA;
+        return b.id - a.id;
+      } else if (sortBy === 'latest') {
+        return b.id - a.id;
+      } else if (sortBy === 'views') {
+        const viewsA = parseInt((a.views || '0').replace(/[^0-9]/g, '')) || 0;
+        const viewsB = parseInt((b.views || '0').replace(/[^0-9]/g, '')) || 0;
+        return viewsB - viewsA;
+      }
+      return 0;
+    });
+  }, [posts, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, minStars, searchQuery, sortBy]);
 
   // Reset page on filter change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedCategory, selectedCreator, selectedTag, hasGithubOnly]);
+  }, [searchQuery, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, minStars, sortBy]);
 
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
   const currentPosts = useMemo(() => {
@@ -388,8 +437,71 @@ export default function App() {
         </div>
       </div>
 
+      {/* NEW SECTION: Latest Releases & Recent Posts Showcase */}
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className={`p-6 rounded-3xl border ${darkMode ? 'bg-slate-900/50 border-slate-800/80' : 'bg-white border-slate-200 shadow-sm'}`}>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5 text-amber-400" />
+              <h2 className="text-base font-black text-slate-100">جدیدترین پروژه‌های معرفی شده در RepoFA</h2>
+              <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 font-bold">
+                تازه و پرطرفدار
+              </span>
+            </div>
+            <button
+              onClick={() => {
+                setSortBy('latest');
+                window.scrollTo({ top: 750, behavior: 'smooth' });
+              }}
+              className="text-xs font-bold text-cyan-400 hover:text-cyan-300"
+            >
+              مرتب‌سازی بر اساس جدیدترین‌ها ↓
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {latestPosts.slice(0, 4).map(post => {
+              return (
+                <div 
+                  key={post.id}
+                  onClick={() => setSelectedPost(post)}
+                  className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between group ${
+                    darkMode 
+                      ? 'bg-slate-950/60 border-slate-800/90 hover:border-amber-500/50 hover:bg-slate-900/80' 
+                      : 'bg-slate-50 border-slate-200 hover:border-amber-500/50 hover:bg-white'
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2 text-xs">
+                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20 font-bold">
+                        پست #{post.id}
+                      </span>
+                      {post.stars && post.stars > 0 ? (
+                        <span className="flex items-center gap-1 font-mono text-amber-400 text-xs font-bold">
+                          <Star className="w-3.5 h-3.5 fill-amber-400" />
+                          {formatStars(post.stars)}
+                        </span>
+                      ) : (
+                        <span className="text-[10px] text-slate-500">{formatDate(post.datetime)}</span>
+                      )}
+                    </div>
+                    <h3 className="text-xs font-bold text-slate-200 group-hover:text-amber-400 transition-colors line-clamp-2 leading-relaxed mb-2">
+                      {post.title_clean}
+                    </h3>
+                  </div>
+                  <div className="flex items-center justify-between text-[11px] text-slate-400 border-t border-slate-800/60 pt-2.5 mt-2 font-mono">
+                    <span className="truncate max-w-[140px] text-cyan-300">{post.primary_repo || 'پروژه اوپن‌سورس'}</span>
+                    <span className="text-amber-400 group-hover:translate-x-[-2px] transition-transform">←</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Hero & Search Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 text-center">
         {selectedCreator && (
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold mb-6 animate-fade-in shadow-lg">
             <img 
@@ -416,7 +528,7 @@ export default function App() {
         )}
 
         {/* Big Search Bar */}
-        <div className="max-w-3xl mx-auto relative mb-8">
+        <div className="max-w-3xl mx-auto relative mb-6">
           <div className="relative flex items-center">
             <Search className="absolute right-4 w-5 h-5 text-slate-400 pointer-events-none" />
             <input 
@@ -439,25 +551,93 @@ export default function App() {
               </button>
             )}
           </div>
+        </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-3 mt-3 text-xs">
-            <div className="flex items-center gap-2">
+        {/* Filter and Sorting Control Bar */}
+        <div className="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl border mb-8 bg-slate-900/60 border-slate-800/80 text-xs">
+          
+          {/* Sorting Buttons (Default: Highest Stars) */}
+          <div className="flex items-center gap-2">
+            <span className="text-slate-400 flex items-center gap-1 font-bold">
+              <ArrowUpDown className="w-3.5 h-3.5 text-cyan-400" />
+              مرتب‌سازی بر اساس:
+            </span>
+            <div className="flex items-center gap-1 p-1 rounded-xl bg-slate-950/80 border border-slate-800">
               <button
-                onClick={() => setHasGithubOnly(!hasGithubOnly)}
-                className={`px-3 py-1.5 rounded-lg border transition-all flex items-center gap-1.5 font-bold ${
-                  hasGithubOnly 
-                    ? 'bg-cyan-500/20 border-cyan-500/40 text-cyan-400' 
-                    : 'bg-slate-800/60 border-slate-700/60 text-slate-400 hover:text-slate-300'
+                onClick={() => setSortBy('stars')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
+                  sortBy === 'stars' 
+                    ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 shadow-md font-black' 
+                    : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
-                <GitBranch className="w-3.5 h-3.5" />
-                <span>فقط دارای مخزن گیت‌هاب</span>
+                <Star className="w-3.5 h-3.5 fill-current" />
+                <span>بیشترین استار (پیش‌فرض)</span>
+              </button>
+
+              <button
+                onClick={() => setSortBy('latest')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
+                  sortBy === 'latest' 
+                    ? 'bg-cyan-500 text-slate-950 shadow-md font-black' 
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <Clock className="w-3.5 h-3.5" />
+                <span>جدیدترین‌ها</span>
+              </button>
+
+              <button
+                onClick={() => setSortBy('views')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-bold transition-all cursor-pointer ${
+                  sortBy === 'views' 
+                    ? 'bg-cyan-500 text-slate-950 shadow-md font-black' 
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <Eye className="w-3.5 h-3.5" />
+                <span>پربازدیدترین‌ها</span>
               </button>
             </div>
+          </div>
 
-            <div className="text-slate-400 font-bold">
-              نمایش <span className="text-cyan-400">{filteredPosts.length}</span> پروژه
+          {/* Star Threshold Quick Filters */}
+          <div className="flex items-center gap-2">
+            <span className="text-slate-400 flex items-center gap-1 font-bold">
+              <Star className="w-3.5 h-3.5 text-amber-400" />
+              حداقل استار:
+            </span>
+            <div className="flex items-center gap-1">
+              {[0, 100, 1000, 10000].map(starCount => (
+                <button
+                  key={starCount}
+                  onClick={() => setMinStars(starCount)}
+                  className={`px-2.5 py-1 rounded-lg border font-mono font-bold transition-all cursor-pointer ${
+                    minStars === starCount
+                      ? 'bg-amber-500/20 border-amber-400 text-amber-300 ring-1 ring-amber-400'
+                      : 'bg-slate-800/60 border-slate-700/60 text-slate-400 hover:text-slate-200'
+                  }`}
+                >
+                  {starCount === 0 ? 'همه' : `+${formatStars(starCount)}`}
+                </button>
+              ))}
             </div>
+
+            <button
+              onClick={() => setHasGithubOnly(!hasGithubOnly)}
+              className={`px-2.5 py-1 rounded-lg border transition-all flex items-center gap-1 font-bold mr-2 cursor-pointer ${
+                hasGithubOnly 
+                  ? 'bg-cyan-500/20 border-cyan-500/40 text-cyan-400' 
+                  : 'bg-slate-800/60 border-slate-700/60 text-slate-400 hover:text-slate-300'
+              }`}
+            >
+              <GitBranch className="w-3 h-3" />
+              <span>فقط با ریپو</span>
+            </button>
+          </div>
+
+          <div className="text-slate-400 font-bold">
+            نمایش <span className="text-cyan-400">{filteredPosts.length}</span> پروژه
           </div>
         </div>
 
@@ -471,7 +651,7 @@ export default function App() {
             {selectedCategory !== 'همه' && (
               <button
                 onClick={() => setSelectedCategory('همه')}
-                className="text-xs text-cyan-400 hover:underline font-bold"
+                className="text-xs text-cyan-400 hover:underline font-bold cursor-pointer"
               >
                 نمایش همه دسته‌ها
               </button>
@@ -521,7 +701,7 @@ export default function App() {
                 <button
                   key={tag}
                   onClick={() => setSelectedTag(isSelected ? null : tag)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all ${
+                  className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-all cursor-pointer ${
                     isSelected 
                       ? 'bg-blue-500/20 border border-blue-400 text-blue-300 font-bold' 
                       : 'bg-slate-800/40 text-slate-400 hover:text-slate-200 hover:bg-slate-800/80 border border-transparent'
@@ -541,7 +721,7 @@ export default function App() {
           <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800/80 max-w-md mx-auto">
             <FolderGit2 className="w-12 h-12 text-slate-600 mx-auto mb-4 animate-bounce" />
             <h3 className="text-base font-bold text-slate-300 mb-1">هیچ پروژه‌ای با این مشخصات یافت نشد</h3>
-            <p className="text-xs text-slate-500 mb-4">عبارت جستجو، فیلتر فرد یا دسته‌بندی را تغییر دهید.</p>
+            <p className="text-xs text-slate-500 mb-4">فیلتر استار، عبارت جستجو یا دسته‌بندی را تغییر دهید.</p>
             <button
               onClick={() => {
                 setSearchQuery('');
@@ -549,8 +729,10 @@ export default function App() {
                 setSelectedCreator(null);
                 setSelectedTag(null);
                 setHasGithubOnly(false);
+                setMinStars(0);
+                setSortBy('stars');
               }}
-              className="px-4 py-2 rounded-xl bg-cyan-500/10 text-cyan-400 text-xs font-bold border border-cyan-500/20 hover:bg-cyan-500/20"
+              className="px-4 py-2 rounded-xl bg-cyan-500/10 text-cyan-400 text-xs font-bold border border-cyan-500/20 hover:bg-cyan-500/20 cursor-pointer"
             >
               پاکسازی همه فیلترها
             </button>
@@ -568,7 +750,7 @@ export default function App() {
                       : 'bg-white border-slate-200 hover:border-cyan-400 hover:shadow-cyan-500/10'
                   }`}
                 >
-                  {/* Media Preview: Guaranteed Image */}
+                  {/* Media Preview */}
                   <div className="relative h-48 overflow-hidden bg-slate-950">
                     <img 
                       src={coverUrl} 
@@ -581,12 +763,28 @@ export default function App() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                     
+                    {/* Stars Badge on Top Right */}
+                    {post.stars && post.stars > 0 && (
+                      <div className="absolute top-3 left-3">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-950/85 backdrop-blur-md text-xs font-mono font-black text-amber-400 border border-amber-500/30 shadow-lg">
+                          <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                          <span>{formatStars(post.stars)} Stars</span>
+                        </span>
+                      </div>
+                    )}
+
                     {post.primary_repo && (
                       <div className="absolute bottom-3 right-3 left-3 flex items-center justify-between">
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-950/85 backdrop-blur-md text-xs font-mono font-bold text-cyan-300 border border-slate-800 shadow">
                           <GitBranch className="w-3.5 h-3.5" />
-                          <span className="truncate max-w-[220px]">{post.primary_repo}</span>
+                          <span className="truncate max-w-[200px]">{post.primary_repo}</span>
                         </span>
+                        {post.forks && post.forks > 0 && (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-slate-950/85 text-[10px] font-mono text-slate-400 border border-slate-800">
+                            <GitFork className="w-3 h-3" />
+                            {post.forks}
+                          </span>
+                        )}
                       </div>
                     )}
                   </div>
@@ -601,7 +799,7 @@ export default function App() {
                             <button 
                               key={cat}
                               onClick={() => setSelectedCategory(cat)}
-                              className="px-2.5 py-0.5 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20 text-[11px] font-bold transition-colors"
+                              className="px-2.5 py-0.5 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20 text-[11px] font-bold transition-colors cursor-pointer"
                             >
                               {cat}
                             </button>
@@ -630,7 +828,7 @@ export default function App() {
                               <button
                                 key={author}
                                 onClick={() => setCreatorProfileModal(author)}
-                                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-800/90 hover:bg-cyan-950/60 hover:border-cyan-500/40 text-cyan-300 font-mono text-[11px] font-bold border border-slate-700 transition-all shadow-sm"
+                                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-800/90 hover:bg-cyan-950/60 hover:border-cyan-500/40 text-cyan-300 font-mono text-[11px] font-bold border border-slate-700 transition-all shadow-sm cursor-pointer"
                               >
                                 <img 
                                   src={`https://github.com/${author}.png?size=32`} 
@@ -660,7 +858,7 @@ export default function App() {
                             <button
                               key={tag}
                               onClick={() => setSelectedTag(tag)}
-                              className="text-[10px] font-mono text-slate-500 hover:text-slate-300 bg-slate-800/40 px-2 py-0.5 rounded-md"
+                              className="text-[10px] font-mono text-slate-500 hover:text-slate-300 bg-slate-800/40 px-2 py-0.5 rounded-md cursor-pointer"
                             >
                               #{tag}
                             </button>
@@ -687,7 +885,7 @@ export default function App() {
 
                           <button
                             onClick={() => setSelectedPost(post)}
-                            className="px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/20 transition-all"
+                            className="px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/20 transition-all cursor-pointer"
                           >
                             مشاهده کامل
                           </button>
@@ -718,7 +916,7 @@ export default function App() {
             <button
               onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
               disabled={currentPage === 1}
-              className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/80 text-slate-400 disabled:opacity-30 disabled:pointer-events-none hover:bg-slate-800 transition-colors"
+              className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/80 text-slate-400 disabled:opacity-30 disabled:pointer-events-none hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -740,7 +938,7 @@ export default function App() {
                   <button
                     key={pageNum}
                     onClick={() => setCurrentPage(pageNum)}
-                    className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold transition-all ${
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold transition-all cursor-pointer ${
                       currentPage === pageNum 
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20' 
                         : 'bg-slate-900/80 border border-slate-800 text-slate-400 hover:bg-slate-800 hover:text-slate-200'
@@ -755,7 +953,7 @@ export default function App() {
             <button
               onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
               disabled={currentPage === totalPages}
-              className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/80 text-slate-400 disabled:opacity-30 disabled:pointer-events-none hover:bg-slate-800 transition-colors"
+              className="p-2.5 rounded-xl border border-slate-800 bg-slate-900/80 text-slate-400 disabled:opacity-30 disabled:pointer-events-none hover:bg-slate-800 transition-colors cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -888,6 +1086,12 @@ export default function App() {
                         </h4>
                         <div className="flex items-center gap-2 text-xs text-slate-500">
                           <span className="font-mono text-cyan-400">{post.primary_repo || 'پروژه'}</span>
+                          {post.stars && post.stars > 0 && (
+                            <span className="flex items-center gap-1 text-amber-400 font-mono font-bold">
+                              <Star className="w-3 h-3 fill-amber-400" />
+                              {formatStars(post.stars)}
+                            </span>
+                          )}
                           <span>·</span>
                           <span>{formatDate(post.datetime)}</span>
                         </div>
@@ -910,7 +1114,7 @@ export default function App() {
                             setSelectedPost(post);
                             setCreatorProfileModal(null);
                           }}
-                          className="px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/20"
+                          className="px-3 py-1.5 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/20 cursor-pointer"
                         >
                           مشاهده
                         </button>
@@ -927,7 +1131,7 @@ export default function App() {
                 onClick={() => {
                   setSelectedCreator(activeCreatorData.name);
                   setCreatorProfileModal(null);
-                  window.scrollTo({ top: 100, behavior: 'smooth' });
+                  window.scrollTo({ top: 750, behavior: 'smooth' });
                 }}
                 className="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs transition-colors cursor-pointer"
               >
@@ -957,6 +1161,12 @@ export default function App() {
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full bg-cyan-500"></span>
                 <span className="text-xs font-mono text-slate-400">پست #{selectedPost.id}</span>
+                {selectedPost.stars && selectedPost.stars > 0 && (
+                  <span className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono text-xs font-bold mr-2">
+                    <Star className="w-3 h-3 fill-amber-400" />
+                    {formatStars(selectedPost.stars)} Stars
+                  </span>
+                )}
               </div>
               <button 
                 onClick={() => setSelectedPost(null)}
@@ -1041,7 +1251,7 @@ export default function App() {
                       </a>
                       <button 
                         onClick={() => copyToClipboard(link, selectedPost.id)}
-                        className="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 bg-slate-800 shrink-0"
+                        className="p-1.5 rounded-lg text-slate-400 hover:text-slate-200 bg-slate-800 shrink-0 cursor-pointer"
                         title="کپی آدرس ریپازیتوری"
                       >
                         {copiedId === selectedPost.id ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
