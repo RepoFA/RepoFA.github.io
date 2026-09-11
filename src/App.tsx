@@ -10,25 +10,27 @@ import {
   Eye, 
   FolderGit2, 
   Moon, 
-  Sun,
-  X,
-  CheckCircle2,
-  Copy,
-  ChevronLeft,
-  ChevronRight,
-  GitBranch,
-  Users,
-  Code2,
-  Cpu,
-  Terminal,
-  Globe,
-  Server,
-  Shield,
-  Bot,
-  Smartphone,
-  ShieldAlert,
-  Database,
-  Grid
+  Sun, 
+  X, 
+  CheckCircle2, 
+  Copy, 
+  ChevronLeft, 
+  ChevronRight, 
+  GitBranch, 
+  Users, 
+  Code2, 
+  Cpu, 
+  Terminal, 
+  Globe, 
+  Server, 
+  Shield, 
+  Bot, 
+  Smartphone, 
+  ShieldAlert, 
+  Database, 
+  Grid,
+  MessageCircle,
+  Sparkles
 } from 'lucide-react';
 
 interface RepoDetail {
@@ -257,29 +259,67 @@ export default function App() {
                   Persian GitHub Hub
                 </span>
               </div>
-              <p className="text-xs text-slate-400">آرشیو و کاوشگر جامع پروژه‌های اوپن‌سورس و توسعه‌دهندگان ایرانی</p>
+              <p className="text-xs text-slate-400">آرشیو و کاوشگر جامع پروژه‌های اوپن‌سورس و ابزارهای فارسی</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Header Social & Action Links */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <a 
+              href="https://t.me/GitHubLensBot" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl bg-purple-500/10 text-purple-400 hover:bg-purple-500/20 border border-purple-500/20 transition-all shadow-sm"
+              title="ربات هوشمند گیت‌هاب لِنز"
+            >
+              <Bot className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">ربات گیت‌هاب لِنز</span>
+            </a>
+
+            <a 
+              href="https://t.me/RepoFaGP" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/20 transition-all shadow-sm"
+              title="گروه گفتگوی RepoFA"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span className="hidden md:inline">سوپرگروه</span>
+            </a>
+
+            <a 
+              href="https://x.com/PersianGitHub" 
+              target="_blank" 
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl bg-sky-500/10 text-sky-400 hover:bg-sky-500/20 border border-sky-500/20 transition-all shadow-sm"
+              title="صفحه اکس (توییتر) PersianGitHub"
+            >
+              <span className="font-mono font-bold text-xs">𝕏</span>
+              <span className="hidden md:inline">اکس (توییتر)</span>
+            </a>
+
             <a 
               href="https://t.me/RepoFA" 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center gap-2 px-3.5 py-2 text-xs font-bold rounded-xl bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/20 transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/20 transition-all shadow-sm"
+              title="کانال تلگرام"
             >
               <Send className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">کانال تلگرام</span>
+              <span className="hidden sm:inline">کانال</span>
             </a>
+
             <a 
               href="https://github.com/RepoFA/RepoFA.github.io" 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center gap-2 px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
+              title="مخزن گیت‌هاب"
             >
               <GitBranch className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">مخزن گیت‌هاب</span>
+              <span className="hidden lg:inline">گیت‌هاب</span>
             </a>
+
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-xl border transition-all ${darkMode ? 'bg-slate-900 border-slate-800 text-amber-400 hover:bg-slate-800' : 'bg-slate-100 border-slate-300 text-slate-700 hover:bg-slate-200'}`}
@@ -291,8 +331,65 @@ export default function App() {
         </div>
       </header>
 
+      {/* Hero Community & Official Channels Banner */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+        <div className={`p-4 rounded-3xl border flex flex-wrap items-center justify-between gap-4 shadow-xl ${darkMode ? 'bg-slate-900/60 border-slate-800/90' : 'bg-white border-slate-200'}`}>
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <Sparkles className="w-5 h-5 animate-pulse" />
+            </div>
+            <div>
+              <h2 className="text-sm font-black text-slate-100">شبکه‌های رسمی و ابزارهای مرتبط RepoFA</h2>
+              <p className="text-xs text-slate-400">برای ارسال ریپازیتوری، گفتگو با برنامه‌نویسان و تحلیل هوشمند مخازن به ما بپیوندید</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2.5">
+            <a
+              href="https://t.me/GitHubLensBot"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-500/15 hover:bg-purple-500/25 text-purple-300 border border-purple-500/30 text-xs font-bold transition-all"
+            >
+              <Bot className="w-4 h-4" />
+              <span>ربات @GitHubLensBot</span>
+            </a>
+
+            <a
+              href="https://t.me/RepoFaGP"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 text-xs font-bold transition-all"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>سوپرگروه @RepoFaGP</span>
+            </a>
+
+            <a
+              href="https://x.com/PersianGitHub"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-500/30 text-xs font-bold transition-all"
+            >
+              <span className="font-mono font-bold text-xs">𝕏</span>
+              <span>اکس (توییتر) @PersianGitHub</span>
+            </a>
+
+            <a
+              href="https://t.me/RepoFA"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-500/15 hover:bg-blue-500/25 text-blue-300 border border-blue-500/30 text-xs font-bold transition-all"
+            >
+              <Send className="w-4 h-4" />
+              <span>کانال @RepoFA</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Hero & Search Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6 text-center">
         {selectedCreator && (
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold mb-6 animate-fade-in shadow-lg">
             <img 
@@ -759,7 +856,7 @@ export default function App() {
 
               <button 
                 onClick={() => setCreatorProfileModal(null)}
-                className="p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-slate-100 hover:bg-slate-700 transition-colors"
+                className="p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-slate-100 hover:bg-slate-700 transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -863,7 +960,7 @@ export default function App() {
               </div>
               <button 
                 onClick={() => setSelectedPost(null)}
-                className="p-1.5 rounded-xl bg-slate-800 text-slate-400 hover:text-slate-100 hover:bg-slate-700 transition-colors"
+                className="p-1.5 rounded-xl bg-slate-800 text-slate-400 hover:text-slate-100 hover:bg-slate-700 transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -978,15 +1075,34 @@ export default function App() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md py-8 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
-            ساخته شده برای حمایت از اکوسیستم اوپن‌سورس فارسی · <strong className="text-slate-400">RepoFA</strong>
+      <footer className="border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md py-10 text-center text-xs text-slate-500">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-right">
+            <p className="font-bold text-slate-300 text-sm">RepoFA | جامعه و دایرکتوری پروژه‌های اوپن‌سورس فارسی</p>
+            <p className="text-slate-500 mt-1">حمایت، معرفی و مستندسازی برترین ابزارها و ریپازیتوری‌های توسعه‌دهندگان ایرانی</p>
           </div>
-          <div className="flex items-center gap-4">
-            <a href="https://t.me/RepoFA" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">کانال تلگرام</a>
-            <a href="https://t.me/RepoFaGP" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">سوپرگروه</a>
-            <a href="https://github.com/RepoFA" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">سازمان گیت‌هاب</a>
+          
+          <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-bold">
+            <a href="https://t.me/GitHubLensBot" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-purple-400 hover:text-purple-300 transition-colors">
+              <Bot className="w-4 h-4" />
+              <span>ربات @GitHubLensBot</span>
+            </a>
+            <a href="https://t.me/RepoFaGP" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors">
+              <MessageCircle className="w-4 h-4" />
+              <span>سوپرگروه @RepoFaGP</span>
+            </a>
+            <a href="https://x.com/PersianGitHub" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-sky-400 hover:text-sky-300 transition-colors">
+              <span className="font-mono font-bold text-xs">𝕏</span>
+              <span>اکس @PersianGitHub</span>
+            </a>
+            <a href="https://t.me/RepoFA" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-blue-400 hover:text-blue-300 transition-colors">
+              <Send className="w-4 h-4" />
+              <span>کانال تلگرام</span>
+            </a>
+            <a href="https://github.com/RepoFA" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-slate-300 hover:text-cyan-400 transition-colors">
+              <FolderGit2 className="w-4 h-4" />
+              <span>سازمان گیت‌هاب</span>
+            </a>
           </div>
         </div>
       </footer>
