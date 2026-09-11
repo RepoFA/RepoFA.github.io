@@ -18,8 +18,17 @@ import {
   ChevronRight,
   GitBranch,
   Users,
-  LayoutGrid,
-  Code2
+  Code2,
+  Cpu,
+  Terminal,
+  Globe,
+  Server,
+  Shield,
+  Bot,
+  Smartphone,
+  ShieldAlert,
+  Database,
+  Grid
 } from 'lucide-react';
 
 interface RepoDetail {
@@ -51,7 +60,6 @@ interface Post {
 }
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'all' | 'categories' | 'creators'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('همه');
   const [selectedCreator, setSelectedCreator] = useState<string | null>(null);
@@ -66,43 +74,22 @@ export default function App() {
   const posts = postsRaw as Post[];
   const postsPerPage = 12;
 
-  // Process posts
-  const processedPosts = useMemo(() => {
-    return posts.map(p => {
-      const text = p.text_plain || '';
-      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-      const titleClean = p.title_clean || (lines.length > 0 ? (lines[0].length > 100 ? lines[0].substring(0, 97) + '...' : lines[0]) : 'بدون عنوان');
-      
-      let cats = p.categories || [];
-      if (!cats || cats.length === 0) {
-        const keywords: Record<string, string[]> = {
-          'AI & هوش مصنوعی': ['هوش مصنوعی', 'llm', 'gpt', 'ai', 'مدل', 'openai', 'ollama', 'یادگیری ماشین'],
-          'ابزار توسعه (DevTools)': ['cli', 'devtools', 'ابزار', 'ترمینال', 'گیت', 'docker', 'داکر', 'کد'],
-          'فرانت‌اند & وب': ['react', 'vue', 'frontend', 'فرانت', 'css', 'html', 'javascript', 'typescript', 'وب'],
-          'بک‌اند & سرور': ['backend', 'پایتون', 'python', 'golang', 'rust', 'سرور', 'api', 'دیتابیس', 'db', 'node'],
-          'امنیت & شبکه': ['فیلترشکن', 'پروکسی', 'v2ray', 'امنیت', 'vpn', 'dns', 'tunnel', 'شبکه', 'proxy'],
-          'سیستم عامل & لینوکس': ['لینوکس', 'linux', 'سیستم عامل', 'ویندوز', 'mac', 'ابونتو'],
-          'ربات & تلگرام': ['تلگرام', 'telegram', 'bot', 'ربات']
-        };
-        const textLower = text.toLowerCase();
-        const detected = [];
-        for (const [cat, kws] of Object.entries(keywords)) {
-          if (kws.some(kw => textLower.includes(kw))) {
-            detected.push(cat);
-          }
-        }
-        cats = detected.length > 0 ? detected : ['سایر پروژه‌ها'];
-      }
-
-      const authors = p.authors || [];
-      return {
-        ...p,
-        title_clean: titleClean,
-        categories: cats,
-        authors: authors
-      };
-    });
-  }, [posts]);
+  // Category Icon Map
+  const getCategoryIcon = (cat: string) => {
+    switch (cat) {
+      case 'هوش مصنوعی و یادگیری ماشین': return <Cpu className="w-4 h-4 text-emerald-400" />;
+      case 'ابزارهای توسعه و CLI': return <Terminal className="w-4 h-4 text-cyan-400" />;
+      case 'فرانت‌اند و UI': return <Globe className="w-4 h-4 text-sky-400" />;
+      case 'بک‌اند و میکروسرویس': return <Server className="w-4 h-4 text-indigo-400" />;
+      case 'فیلترشکن، پروکسی و شبکه': return <Shield className="w-4 h-4 text-violet-400" />;
+      case 'لینوکس و سیستم‌عامل': return <Terminal className="w-4 h-4 text-amber-400" />;
+      case 'بات‌های تلگرام و پیام‌رسان': return <Bot className="w-4 h-4 text-blue-400" />;
+      case 'موبایل و اندروید': return <Smartphone className="w-4 h-4 text-green-400" />;
+      case 'امنیت، تست نفوذ و پنتست': return <ShieldAlert className="w-4 h-4 text-rose-400" />;
+      case 'داده، اسکراپینگ و اتوماسیون': return <Database className="w-4 h-4 text-orange-400" />;
+      default: return <Grid className="w-4 h-4 text-cyan-400" />;
+    }
+  };
 
   // Helper to get image or GitHub OG fallback
   const getPostCoverImage = (post: Post) => {
@@ -120,19 +107,19 @@ export default function App() {
 
   // Category stats
   const categoryStats = useMemo(() => {
-    const stats: Record<string, number> = { 'همه': processedPosts.length };
-    processedPosts.forEach(p => {
-      p.categories.forEach(cat => {
+    const stats: Record<string, number> = { 'همه': posts.length };
+    posts.forEach(p => {
+      (p.categories || []).forEach(cat => {
         stats[cat] = (stats[cat] || 0) + 1;
       });
     });
     return stats;
-  }, [processedPosts]);
+  }, [posts]);
 
   // Creator stats & profiles mapping
   const creatorStats = useMemo(() => {
     const map: Record<string, { count: number; avatar: string; repos: string[]; posts: Post[] }> = {};
-    processedPosts.forEach(p => {
+    posts.forEach(p => {
       (p.authors || []).forEach(author => {
         if (!map[author]) {
           map[author] = {
@@ -152,7 +139,7 @@ export default function App() {
     return Object.entries(map)
       .map(([name, data]) => ({ name, ...data }))
       .sort((a, b) => b.count - a.count);
-  }, [processedPosts]);
+  }, [posts]);
 
   const activeCreatorData = useMemo(() => {
     if (!creatorProfileModal) return null;
@@ -162,22 +149,22 @@ export default function App() {
   // Top tags
   const topTags = useMemo(() => {
     const tagCounts: Record<string, number> = {};
-    processedPosts.forEach(p => {
+    posts.forEach(p => {
       (p.tags || []).forEach(t => {
         tagCounts[t] = (tagCounts[t] || 0) + 1;
       });
     });
     return Object.entries(tagCounts)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 16)
+      .slice(0, 18)
       .map(([tag]) => tag);
-  }, [processedPosts]);
+  }, [posts]);
 
   // Filtered posts
   const filteredPosts = useMemo(() => {
-    return processedPosts.filter(post => {
+    return posts.filter(post => {
       // Category filter
-      if (selectedCategory !== 'همه' && !post.categories.includes(selectedCategory)) {
+      if (selectedCategory !== 'همه' && !(post.categories || []).includes(selectedCategory)) {
         return false;
       }
 
@@ -187,7 +174,7 @@ export default function App() {
       }
 
       // Tag filter
-      if (selectedTag && !post.tags.includes(selectedTag)) {
+      if (selectedTag && !(post.tags || []).includes(selectedTag)) {
         return false;
       }
 
@@ -199,7 +186,7 @@ export default function App() {
       // Search query
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase().trim();
-        const inTitle = (post.title_clean || '').toLowerCase().includes(q);
+        const inTitle = (post.title_clean || post.title || '').toLowerCase().includes(q);
         const inText = post.text_plain.toLowerCase().includes(q);
         const inRepo = (post.repo_names || []).some(r => r.toLowerCase().includes(q));
         const inAuthor = (post.authors || []).some(a => a.toLowerCase().includes(q));
@@ -211,12 +198,12 @@ export default function App() {
 
       return true;
     });
-  }, [processedPosts, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, searchQuery]);
+  }, [posts, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, searchQuery]);
 
   // Reset page on filter change
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchQuery, selectedCategory, selectedCreator, selectedTag, hasGithubOnly, activeTab]);
+  }, [searchQuery, selectedCategory, selectedCreator, selectedTag, hasGithubOnly]);
 
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
   const currentPosts = useMemo(() => {
@@ -245,7 +232,7 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen font-sans transition-colors duration-200 ${darkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
+    <div className={`min-h-screen transition-colors duration-200 ${darkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`} style={{ fontFamily: "'Vazirmatn', sans-serif" }}>
       
       {/* Background ambient glow */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -279,7 +266,7 @@ export default function App() {
               href="https://t.me/RepoFA" 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center gap-2 px-3 py-2 text-xs font-bold rounded-xl bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/20 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 text-xs font-bold rounded-xl bg-blue-500/10 text-blue-400 hover:bg-blue-500/20 border border-blue-500/20 transition-all"
             >
               <Send className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">کانال تلگرام</span>
@@ -288,7 +275,7 @@ export default function App() {
               href="https://github.com/RepoFA/RepoFA.github.io" 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center gap-2 px-3 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
+              className="flex items-center gap-2 px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
             >
               <GitBranch className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">مخزن گیت‌هاب</span>
@@ -304,123 +291,10 @@ export default function App() {
         </div>
       </header>
 
-      {/* Featured Creators Carousel on Home */}
-      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className={`p-5 rounded-3xl border ${darkMode ? 'bg-slate-900/60 border-slate-800/80 shadow-2xl' : 'bg-white border-slate-200 shadow-md'}`}>
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-cyan-400" />
-              <h2 className="text-sm font-bold text-slate-200">توسعه‌دهندگان و خالقان پروژه‌ها</h2>
-              <span className="text-[11px] text-slate-400">({creatorStats.length} سازنده و سازمان)</span>
-            </div>
-            <button
-              onClick={() => {
-                setActiveTab('creators');
-                window.scrollTo({ top: 300, behavior: 'smooth' });
-              }}
-              className="text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
-            >
-              مشاهده همه افراد ←
-            </button>
-          </div>
-
-          <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
-            {creatorStats.slice(0, 18).map(creator => {
-              const isSelected = selectedCreator === creator.name;
-              return (
-                <button
-                  key={creator.name}
-                  onClick={() => setCreatorProfileModal(creator.name)}
-                  className={`shrink-0 flex flex-col items-center gap-2 p-2.5 rounded-2xl border transition-all duration-200 group ${
-                    isSelected 
-                      ? 'bg-cyan-500/20 border-cyan-400 ring-2 ring-cyan-500/30' 
-                      : darkMode
-                        ? 'bg-slate-950/60 border-slate-800 hover:border-cyan-500/40 hover:bg-slate-800/80'
-                        : 'bg-slate-50 border-slate-200 hover:border-cyan-500/40 hover:bg-slate-100'
-                  }`}
-                  style={{ minWidth: '92px' }}
-                >
-                  <div className="relative">
-                    <img 
-                      src={creator.avatar} 
-                      alt={creator.name} 
-                      className="w-12 h-12 rounded-full border-2 border-slate-700 group-hover:border-cyan-400 object-cover shadow transition-transform group-hover:scale-105"
-                      loading="lazy"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
-                      }}
-                    />
-                    <span className="absolute -bottom-1 -left-1 px-1.5 py-0.2 rounded-full bg-cyan-500 text-slate-950 text-[10px] font-black shadow">
-                      {creator.count}
-                    </span>
-                  </div>
-                  <span className="text-[11px] font-mono font-medium truncate max-w-[80px] text-slate-300 group-hover:text-cyan-300">
-                    {creator.name}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Main Tabs Navigation */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        <div className="flex items-center justify-center">
-          <div className={`p-1.5 rounded-2xl border flex items-center gap-1 shadow-lg ${darkMode ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200'}`}>
-            <button
-              onClick={() => {
-                setActiveTab('all');
-                setSelectedCategory('همه');
-                setSelectedCreator(null);
-              }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
-                activeTab === 'all'
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              <LayoutGrid className="w-4 h-4" />
-              <span>همه پروژه‌ها ({processedPosts.length})</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setActiveTab('categories');
-                setSelectedCreator(null);
-              }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
-                activeTab === 'categories'
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              <Layers className="w-4 h-4" />
-              <span>دسته‌بندی موضوعی ({Object.keys(categoryStats).length - 1})</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setActiveTab('creators');
-                setSelectedCategory('همه');
-              }}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all ${
-                activeTab === 'creators'
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/25'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              <Users className="w-4 h-4" />
-              <span>تفکیک افراد ({creatorStats.length})</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Hero & Search Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 text-center">
         {selectedCreator && (
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold mb-4 animate-fade-in shadow-lg">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-sm font-bold mb-6 animate-fade-in shadow-lg">
             <img 
               src={`https://github.com/${selectedCreator}.png?size=48`} 
               alt={selectedCreator} 
@@ -445,7 +319,7 @@ export default function App() {
         )}
 
         {/* Big Search Bar */}
-        <div className="max-w-3xl mx-auto relative mb-6">
+        <div className="max-w-3xl mx-auto relative mb-8">
           <div className="relative flex items-center">
             <Search className="absolute right-4 w-5 h-5 text-slate-400 pointer-events-none" />
             <input 
@@ -490,96 +364,57 @@ export default function App() {
           </div>
         </div>
 
-        {/* Categories Tab Content */}
-        {activeTab === 'categories' && (
-          <div className="max-w-5xl mx-auto mb-8 animate-fade-in">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-              {Object.entries(categoryStats).filter(([cat]) => cat !== 'همه').map(([cat, count]) => {
-                const isSelected = selectedCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => {
-                      setSelectedCategory(isSelected ? 'همه' : cat);
-                      setSelectedTag(null);
-                    }}
-                    className={`p-4 rounded-2xl border text-right transition-all flex flex-col justify-between ${
-                      isSelected 
-                        ? 'bg-gradient-to-br from-cyan-600 to-blue-700 text-white border-cyan-400 shadow-lg shadow-cyan-500/20 scale-[1.02]' 
-                        : darkMode 
-                          ? 'bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300' 
-                          : 'bg-white border-slate-200 hover:border-slate-300 text-slate-700'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <Layers className={`w-5 h-5 ${isSelected ? 'text-white' : 'text-cyan-400'}`} />
-                      <span className={`text-xs px-2 py-0.5 rounded-full font-black ${isSelected ? 'bg-black/20 text-white' : 'bg-slate-800 text-cyan-400'}`}>
-                        {count} ریپو
-                      </span>
-                    </div>
-                    <span className="font-bold text-sm">{cat}</span>
-                  </button>
-                );
-              })}
-            </div>
+        {/* Extensive Categories Grid */}
+        <div className="max-w-6xl mx-auto mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-sm font-black text-slate-300 flex items-center gap-2">
+              <Layers className="w-4 h-4 text-cyan-400" />
+              دسته‌بندی‌های موضوعی پروژه‌ها:
+            </h2>
+            {selectedCategory !== 'همه' && (
+              <button
+                onClick={() => setSelectedCategory('همه')}
+                className="text-xs text-cyan-400 hover:underline font-bold"
+              >
+                نمایش همه دسته‌ها
+              </button>
+            )}
           </div>
-        )}
 
-        {/* Creators Tab Content */}
-        {activeTab === 'creators' && (
-          <div className="max-w-6xl mx-auto mb-10 text-right animate-fade-in">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-sm font-bold text-slate-300 flex items-center gap-2">
-                <Users className="w-4 h-4 text-cyan-400" />
-                لیست تمام توسعه‌دهندگان (کلیک روی هر فرد برای مشاهده پروفایل و پروژه‌ها):
-              </h3>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-              {creatorStats.map(creator => {
-                const isSelected = selectedCreator === creator.name;
-                return (
-                  <button
-                    key={creator.name}
-                    onClick={() => setCreatorProfileModal(creator.name)}
-                    className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center gap-2 group cursor-pointer ${
-                      isSelected
-                        ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-md ring-2 ring-cyan-500/30'
-                        : darkMode
-                          ? 'bg-slate-900/70 border-slate-800 hover:border-cyan-500/40 text-slate-300 hover:bg-slate-900'
-                          : 'bg-white border-slate-200 hover:border-cyan-500/40 text-slate-700'
-                    }`}
-                  >
-                    <div className="relative">
-                      <img 
-                        src={creator.avatar} 
-                        alt={creator.name} 
-                        className="w-14 h-14 rounded-full border-2 border-slate-700 group-hover:border-cyan-400 object-cover group-hover:scale-105 transition-transform shadow"
-                        loading="lazy"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
-                        }}
-                      />
-                      <span className="absolute -bottom-1 -right-1 px-1.5 py-0.2 rounded-full bg-cyan-500 text-slate-950 font-mono text-[10px] font-black shadow">
-                        {creator.count}
-                      </span>
-                    </div>
-                    <span className="text-xs font-mono font-bold truncate w-full text-center group-hover:text-cyan-400">
-                      {creator.name}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
+            {Object.entries(categoryStats).map(([cat, count]) => {
+              const isSelected = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setSelectedTag(null);
+                  }}
+                  className={`p-3 rounded-2xl border text-right transition-all flex flex-col justify-between cursor-pointer ${
+                    isSelected 
+                      ? 'bg-gradient-to-br from-cyan-600 to-blue-700 text-white border-cyan-400 shadow-lg shadow-cyan-500/25 scale-[1.03] ring-2 ring-cyan-400' 
+                      : darkMode 
+                        ? 'bg-slate-900/80 border-slate-800 hover:border-cyan-500/40 text-slate-300 hover:bg-slate-900' 
+                        : 'bg-white border-slate-200 hover:border-cyan-500/40 text-slate-700'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    {getCategoryIcon(cat)}
+                    <span className={`text-[11px] px-2 py-0.5 rounded-full font-black ${isSelected ? 'bg-black/30 text-white' : 'bg-slate-800 text-cyan-400'}`}>
+                      {count}
                     </span>
-                    <span className="text-[10px] text-slate-500">
-                      {creator.count} پروژه معرفی شده
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+                  </div>
+                  <span className="font-bold text-xs leading-snug line-clamp-2">{cat}</span>
+                </button>
+              );
+            })}
           </div>
-        )}
+        </div>
 
         {/* Tags bar */}
         {topTags.length > 0 && (
-          <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-3xl mx-auto mb-6">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 max-w-4xl mx-auto mb-6">
             <span className="text-slate-500 text-xs flex items-center gap-1 ml-2 font-bold">
               <Tag className="w-3 h-3" /> هشتگ‌ها:
             </span>
@@ -603,7 +438,7 @@ export default function App() {
         )}
       </div>
 
-      {/* Main Grid */}
+      {/* Main Posts Grid */}
       <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         {currentPosts.length === 0 ? (
           <div className="text-center py-20 bg-slate-900/40 rounded-3xl border border-slate-800/80 max-w-md mx-auto">
@@ -668,10 +503,7 @@ export default function App() {
                           {(post.categories || []).slice(0, 2).map(cat => (
                             <button 
                               key={cat}
-                              onClick={() => {
-                                setSelectedCategory(cat);
-                                setActiveTab('categories');
-                              }}
+                              onClick={() => setSelectedCategory(cat)}
                               className="px-2.5 py-0.5 rounded-lg bg-cyan-500/10 text-cyan-400 hover:bg-cyan-500/20 border border-cyan-500/20 text-[11px] font-bold transition-colors"
                             >
                               {cat}
@@ -834,6 +666,61 @@ export default function App() {
         )}
       </main>
 
+      {/* Creators / People Section at Bottom of Homepage */}
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 border-t border-slate-800/60 pt-12">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2 className="text-xl font-black text-slate-100 flex items-center gap-2">
+              <Users className="w-5 h-5 text-cyan-400" />
+              توسعه‌دهندگان و خالقان پروژه‌ها
+            </h2>
+            <p className="text-xs text-slate-400 mt-1">
+              کلیک روی هر فرد برای مشاهده پروفایل و تمامی پروژه‌های اوپن‌سورس او در RepoFA ({creatorStats.length} فرد و سازمان)
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {creatorStats.slice(0, 36).map(creator => {
+            const isSelected = selectedCreator === creator.name;
+            return (
+              <button
+                key={creator.name}
+                onClick={() => setCreatorProfileModal(creator.name)}
+                className={`p-3.5 rounded-2xl border text-center transition-all flex flex-col items-center gap-2 group cursor-pointer ${
+                  isSelected
+                    ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-md ring-2 ring-cyan-500/30'
+                    : darkMode
+                      ? 'bg-slate-900/70 border-slate-800 hover:border-cyan-500/40 text-slate-300 hover:bg-slate-900'
+                      : 'bg-white border-slate-200 hover:border-cyan-500/40 text-slate-700'
+                }`}
+              >
+                <div className="relative">
+                  <img 
+                    src={creator.avatar} 
+                    alt={creator.name} 
+                    className="w-14 h-14 rounded-full border-2 border-slate-700 group-hover:border-cyan-400 object-cover group-hover:scale-105 transition-transform shadow"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
+                    }}
+                  />
+                  <span className="absolute -bottom-1 -right-1 px-1.5 py-0.2 rounded-full bg-cyan-500 text-slate-950 font-mono text-[10px] font-black shadow">
+                    {creator.count}
+                  </span>
+                </div>
+                <span className="text-xs font-mono font-bold truncate w-full text-center group-hover:text-cyan-400">
+                  {creator.name}
+                </span>
+                <span className="text-[10px] text-slate-500">
+                  {creator.count} پروژه
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Creator Profile Modal */}
       {activeCreatorData && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 backdrop-blur-md bg-slate-950/80">
@@ -943,16 +830,16 @@ export default function App() {
                 onClick={() => {
                   setSelectedCreator(activeCreatorData.name);
                   setCreatorProfileModal(null);
-                  setActiveTab('all');
+                  window.scrollTo({ top: 100, behavior: 'smooth' });
                 }}
-                className="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs transition-colors"
+                className="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold text-xs transition-colors cursor-pointer"
               >
                 فیلتر صفحه اصلی با پروژه‌های این فرد
               </button>
 
               <button
                 onClick={() => setCreatorProfileModal(null)}
-                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium"
+                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium cursor-pointer"
               >
                 بستن
               </button>
@@ -1081,7 +968,7 @@ export default function App() {
               </a>
               <button
                 onClick={() => setSelectedPost(null)}
-                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition-colors"
+                className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition-colors cursor-pointer"
               >
                 بستن
               </button>

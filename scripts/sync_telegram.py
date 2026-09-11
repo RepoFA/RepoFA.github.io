@@ -12,6 +12,19 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 }
 
+CATEGORIES_MAP = {
+    'هوش مصنوعی و یادگیری ماشین': ['هوش مصنوعی', 'llm', 'gpt', 'ai', 'عمیق', 'مدل', 'openai', 'ollama', 'یادگیری ماشین', 'whisper', 'stable diffusion', 'rag', 'agent', 'claude', 'gemini'],
+    'ابزارهای توسعه و CLI': ['cli', 'devtools', 'ابزار', 'ترمینال', 'گیت', 'docker', 'داکر', 'کدنویسی', 'کد', 'کیبورد', 'extension', 'افزونه', 'vs code', 'ide', 'دیباگ', 'پکیج'],
+    'فرانت‌اند و UI': ['react', 'vue', 'frontend', 'فرانت', 'css', 'html', 'javascript', 'typescript', 'وب', 'tailwind', 'next.js', 'svelte', 'کامپوننت', 'طراحی', 'ux', 'ui'],
+    'بک‌اند و میکروسرویس': ['backend', 'پایتون', 'python', 'golang', 'rust', 'سرور', 'api', 'دیتابیس', 'db', 'node', 'django', 'fastapi', 'express', 'nest', 'postgres', 'redis', 'graphql'],
+    'فیلترشکن، پروکسی و شبکه': ['فیلترشکن', 'پروکسی', 'v2ray', 'امنیت', 'vpn', 'dns', 'tunnel', 'شبکه', 'proxy', 'xray', 'vless', 'vmess', 'hysteria', 'warp', 'کانفیگ', 'شادوساکس'],
+    'لینوکس و سیستم‌عامل': ['لینوکس', 'linux', 'سیستم عامل', 'ویندوز', 'mac', 'ابونتو', 'ubuntu', 'arch', 'bash', 'shell', 'کرنل', 'اسکریپت'],
+    'بات‌های تلگرام و پیام‌رسان': ['تلگرام', 'telegram', 'bot', 'ربات', 'userbot', 'یوزربات', 'بله', 'ایتا', 'دیسکورد', 'discord'],
+    'موبایل و اندروید': ['اندروید', 'android', 'flutter', 'react native', 'ios', 'موبایل', 'اپلیکیشن', 'apk', 'کاتلین', 'kotlin', 'swift'],
+    'امنیت، تست نفوذ و پنتست': ['امنیت', 'پنتست', 'هک', 'نفوذ', 'اسکنر', 'scanner', 'security', 'crypto', 'رمزنگاری', 'exploit', 'آسیب‌پذیری'],
+    'داده، اسکراپینگ و اتوماسیون': ['اسکرپ', 'اسکراپ', 'crawl', 'scraper', 'اتوماسیون', 'automation', 'داده', 'data', 'سلنیوم', 'selenium', 'پانداز', 'pandas']
+}
+
 def sync_channel():
     all_posts = []
     before = None
@@ -103,20 +116,10 @@ def sync_channel():
             if len(title) > 100:
                 title = title[:97] + '...'
                 
-            # Categories
-            keywords = {
-                'AI & هوش مصنوعی': ['هوش مصنوعی', 'llm', 'gpt', 'ai', 'عمیق', 'مدل', 'openai', 'ollama', 'یادگیری ماشین'],
-                'ابزار توسعه (DevTools)': ['cli', 'devtools', 'ابزار', 'ترمینال', 'گیت', 'docker', 'داکر', 'کدنویسی', 'کد'],
-                'فرانت‌اند & وب': ['react', 'vue', 'frontend', 'فرانت', 'css', 'html', 'javascript', 'typescript', 'وب'],
-                'بک‌اند & سرور': ['backend', 'پایتون', 'python', 'golang', 'rust', 'سرور', 'api', 'دیتابیس', 'db', 'node'],
-                'امنیت & شبکه': ['فیلترشکن', 'پروکسی', 'v2ray', 'امنیت', 'vpn', 'dns', 'tunnel', 'شبکه', 'proxy'],
-                'سیستم عامل & لینوکس': ['لینوکس', 'linux', 'سیستم عامل', 'ویندوز', 'mac', 'ابونتو'],
-                'ربات & تلگرام': ['تلگرام', 'telegram', 'bot', 'ربات']
-            }
-            
+            # Rich Categories
             detected_cats = []
             text_lower = text_plain.lower()
-            for cat, kws in keywords.items():
+            for cat, kws in CATEGORIES_MAP.items():
                 if any(kw in text_lower for kw in kws):
                     detected_cats.append(cat)
                     
