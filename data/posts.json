@@ -11,7 +11,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/gXJv_FKAj7Wxct1ZvSjNZs6l4EgK6d0hB5ejPkdDYj8gJA2EPZ-s9e1hxhaASoqW9_U3b5dyKgYbBi6jxBv2-CMfKvCbtI3f11YRzecoYk2UwniET5N5Nxb3qpiY6MCsJTjc0-VQJaCkB3wfMUZp3VQHEtTI-g_mVLSRNlsOsAqjiysn_UYBojeLgJ1WnqPRkbbu0b7AzH974D5gaSDNnzzAiVR7I8KAQtytiFjhAH0XzXMNb4XNiYM4fDomlsUACnRHvN-FhNZb_I9ArJkTbs_IMnZTPSt9lGLn6pVZydR3CwT5MmOG2lsuXl77c2VkZ9sDPTGCxzDrSRwetydq6g.jpg"
     ],
-    "views": "1.8K",
+    "views": "1.81K",
     "github_links": [
       "https://github.com/Mahdi-mortazavi/relay"
     ],
@@ -38,7 +38,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 181,
+    "forks": 14,
+    "language": "C#"
   },
   {
     "id": 622,
@@ -52,7 +55,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/lMfFMW3atGD7zFPA9XgiPRk-Y8OWFZui5wEOn8rAVzy-IflFAkGB7_DtPUonyHgA_ecooPAGqceBxpOO2DVgkk8wdC87xUjKXxCcra70XfyUmaRCSO1hkI2uFBbd6jxyEvrEHMmdvzN0ORY9kkYnICdnB5ptXRox1gn5JLIL3TDwzyaAuaSzUVVZ1xEU9aBwczH3nok3Wi6DfTR_AnWx4HJRX8OfT7F-iPhHFIQw9G8IHdc314u4JzZzBrvdGK-RyQrJF3jy1v7Upn_9-oVAV6NB4DnkHQioA45qXWuffrD_GFOaIgjEKyd2lVgBiMCgqjCFC8Y7YH9trpkhwS2IxQ.jpg"
     ],
-    "views": "2.08K",
+    "views": "2.09K",
     "github_links": [
       "https://github.com/ChosoMeister/alertflow"
     ],
@@ -78,7 +81,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 1,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 620,
@@ -92,7 +98,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/YPxNlm5dfTGNySiADuHE_MpzwJ7X56byI8Q_KceTJsAqf69ukSSN041rmE_JV_rNwY-LoDY9zBDHYmaKdyrTeAlNBjeIcfqBzuBR4zW2MdnynUvGQQEpgwWCyrtlE_EJ7xHYDhnuliIcGySY-BWSCc-vQ3tdLCV57hAQCByupQNUG2o0mN0UK0i1Ni1KMhFbdOhqLVuaWCWgUOJUbVq70eRPT-q3KWDLO2tUB3sto7GoYDzsDq48RdaByhjVlSH3WEhI7cn8dN9-rQZLiEHkkoRWOi8u5ZxkTu1pcxOdo6YaTLL9B0Ggs9v2A7aGbFJYMZG8p3s9RDhTJWo90HdxFg.jpg"
     ],
-    "views": "2.75K",
+    "views": "2.76K",
     "github_links": [
       "https://github.com/Parsa013Ah/OpenCode-Unlimited-ProxyPool"
     ],
@@ -117,7 +123,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 619,
@@ -154,7 +163,10 @@
     ],
     "categories": [
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 25,
+    "forks": 1,
+    "language": "Go"
   },
   {
     "id": 618,
@@ -168,7 +180,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/vrgP2A7D6TigDmmgoQdFAh_yiHIOJizPwYBFEMwnQxTTt6b1nZU7SyQYJcx42KIy4-vIjYO6LAQ12OR1XjGJ18fSLjjPWs8Zt2D0O365m8BTVqf9ISoPIE-WIN4grV3AI1EuxLiD3D2r0IIn1gq3QHCrQn46Nxj2B3_8847r39U9hJDOC3ItGSP_aFkOF58Yc4cNIllTYaR9mWu32J91-bDg7e7UkYDiamtodDAE2SZ0b8CZ3xDCfjTfdCwxiLJUB2K__NyCO0uda7wyTMU1hKIeBnSwvm2I-F8Wnu7tsfOG9G7aL7vCS6y-UyqAVR8Mu-rhAW4Kzfk5GuNmTVaa9g.jpg"
     ],
-    "views": "3.01K",
+    "views": "3.02K",
     "github_links": [
       "https://github.com/taymakz/tehgo"
     ],
@@ -193,7 +205,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 68,
+    "forks": 2,
+    "language": "TypeScript"
   },
   {
     "id": 617,
@@ -205,7 +220,7 @@
     "text_html": "<b>God's Eye View:</b><br/><br/>نمای سه بعدی و زنده از زمین میسازه و کلی داده عمومی رو کنار هم قرار میده.<br/><br/>میتونید هواپیما، کشتی، ماهواره، زلزله، آتش سوزی، دوربین های عمومی، رادیو و حتی کابل های زیردریایی رو روی نقشه ببینید و دنبالشون کنید.<br/><br/>حتی میشه وارد نمای کابین یک پرواز شد، مسیر ماهواره ها رو دید، روی نقشه با صدا علامت گذاری کرد و ظاهر محیط رو به حالت هایی مثل دید در شب، دید حرارتی و صفحه های قدیمی تغییر داد.<br/><br/>خیلی جزئیات داره پیشنهاد میکنم یه نگاه بهش بندازید<br/><br/> <a href=\"https://github.com/bilawalsidhu/gods-eye-view\" rel=\"noopener\" target=\"_blank\">https://github.com/bilawalsidhu/gods-eye-view</a><br/><br/><tg-emoji emoji-id=\"5832622028133245023\"><i class=\"emoji\" style=\"background-image:url('//telegram.org/img/emoji/40/F09F9099.png')\"><b>🐙</b></i></tg-emoji> <a href=\"https://t.me/RepoFA\" target=\"_blank\">@RepoFA</a>",
     "text_plain": "God's Eye View:\nنمای سه بعدی و زنده از زمین میسازه و کلی داده عمومی رو کنار هم قرار میده.\nمیتونید هواپیما، کشتی، ماهواره، زلزله، آتش سوزی، دوربین های عمومی، رادیو و حتی کابل های زیردریایی رو روی نقشه ببینید و دنبالشون کنید.\nحتی میشه وارد نمای کابین یک پرواز شد، مسیر ماهواره ها رو دید، روی نقشه با صدا علامت گذاری کرد و ظاهر محیط رو به حالت هایی مثل دید در شب، دید حرارتی و صفحه های قدیمی تغییر داد.\nخیلی جزئیات داره پیشنهاد میکنم یه نگاه بهش بندازید\n \nhttps://github.com/bilawalsidhu/gods-eye-view\n🐙\n \n@RepoFA",
     "photos": [],
-    "views": "2.97K",
+    "views": "2.98K",
     "github_links": [
       "https://github.com/bilawalsidhu/gods-eye-view"
     ],
@@ -228,7 +243,10 @@
     ],
     "categories": [
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 24789,
+    "forks": 5118,
+    "language": "JavaScript"
   },
   {
     "id": 616,
@@ -266,7 +284,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 3,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 615,
@@ -304,7 +325,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 614,
@@ -343,7 +367,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 17,
+    "forks": 7,
+    "language": "Python"
   },
   {
     "id": 613,
@@ -378,7 +405,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 5,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 612,
@@ -417,7 +447,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 4533,
+    "forks": 364,
+    "language": "TypeScript"
   },
   {
     "id": 606,
@@ -452,7 +485,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 16,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 605,
@@ -489,7 +525,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 206,
+    "forks": 30,
+    "language": "Rust"
   },
   {
     "id": 604,
@@ -524,7 +563,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 5,
+    "forks": 3,
+    "language": "Python"
   },
   {
     "id": 603,
@@ -538,7 +580,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/OGqe_SQv-iXk9PKDRvggRvj6ukHtMCsHPliZsoBipn2DM4M6ybmGNxJXrDq60fpDRz6f_dFPUzhy9fA8HlxWMw6DRd_r1PQnjiNwTxUxs8NrtSkObRByep_o7Slt9lbFrusPN55SSOVw3iziRQfH5sxL0OVwKHVisxlS5O8rtsX5k4-RajLLHdQMkW-ypWjDTOCyMrKi9-gqzLHBZQPzXDKlxtwn7pAPgW-PlOyUoPdPtz9FLCbWv1okD6iJnUVxcQKQv_WHRkloemMa83QpZCiB5nAiqLEBUwN-ZZxmv5Iooyyr3qOFDRoSo9QqFKDeKmr9z2X4QIzKsdfrZkp9Zg.jpg"
     ],
-    "views": "4.94K",
+    "views": "4.95K",
     "github_links": [
       "https://github.com/bepass-org/oblivion/releases/tag/v8"
     ],
@@ -562,7 +604,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 4799,
+    "forks": 628,
+    "language": "Dart"
   },
   {
     "id": 602,
@@ -588,7 +633,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 601,
@@ -610,7 +658,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 600,
@@ -647,7 +698,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 135,
+    "forks": 9,
+    "language": "TypeScript"
   },
   {
     "id": 598,
@@ -684,7 +738,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 19,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 597,
@@ -706,7 +763,10 @@
     "repo_details": [],
     "categories": [
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 596,
@@ -743,7 +803,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 595,
@@ -783,7 +846,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 1187,
+    "forks": 192,
+    "language": "Go"
   },
   {
     "id": 594,
@@ -820,7 +886,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 593,
@@ -834,17 +903,17 @@
     "photos": [
       "https://cdn4.telesco.pe/file/lA5vVQT2kSVAij0fLLlH90e9rNjlnYz3tojf1xdKjmW2gOu7BfwWTj33REgSao3xk0aRdn5cX_uAjHSRvDMB9ZFS3du1oQ8YA8HcO_CpifaF3LsUJtrSrcyQGTf6TahsqC1nwPbd2kiVPrRllmHcgJV6bA0MfkC7siXXd0NmGrtij3VrCKpwtjuD1i24SbGrAUMf7NH3aFlwHkkvrrwcISw9k_lhb5M8vII2H88PdE9skPz7yNVXESO-WlESmrE8qZh_khhjGo_QzF26GoOQ3nsz8GE_oXPr8FP_tpegDWGbd1d5oipM5s61YOfxEJ0bX1MIrARsNt779KXvh6KuSw.jpg"
     ],
-    "views": "3.58K",
+    "views": "3.59K",
     "github_links": [
+      "https://github.com/ali77gh/PersianToolsCli",
       "https://github.com/persian-tools/rust-persian-tools",
-      "https://github.com/ali77gh/PersianToolsWeb",
-      "https://github.com/ali77gh/PersianToolsCli"
+      "https://github.com/ali77gh/PersianToolsWeb"
     ],
     "tags": [],
     "primary_repo": "persian-tools/rust-persian-tools",
     "repo_names": [
-      "ali77gh/PersianToolsCli",
       "persian-tools/rust-persian-tools",
+      "ali77gh/PersianToolsCli",
       "ali77gh/PersianToolsWeb"
     ],
     "authors": [
@@ -876,7 +945,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 77,
+    "forks": 11,
+    "language": "Rust"
   },
   {
     "id": 592,
@@ -913,7 +985,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 8,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 591,
@@ -948,7 +1023,10 @@
     ],
     "categories": [
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 590,
@@ -985,7 +1063,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 8,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 589,
@@ -1025,7 +1106,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 588,
@@ -1060,7 +1144,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 19,
+    "forks": 0,
+    "language": "C++"
   },
   {
     "id": 587,
@@ -1099,7 +1186,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 586,
@@ -1137,7 +1227,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 585,
@@ -1176,7 +1269,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 11,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 584,
@@ -1213,7 +1309,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 73,
+    "forks": 3,
+    "language": "TypeScript"
   },
   {
     "id": 583,
@@ -1252,7 +1351,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 582,
@@ -1291,7 +1393,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 11,
+    "forks": 0,
+    "language": "Go"
   },
   {
     "id": 579,
@@ -1329,7 +1434,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 45,
+    "forks": 2,
+    "language": "HTML"
   },
   {
     "id": 578,
@@ -1368,7 +1476,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 5,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 577,
@@ -1403,7 +1514,10 @@
     ],
     "categories": [
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 27,
+    "forks": 0,
+    "language": "Kotlin"
   },
   {
     "id": 576,
@@ -1442,7 +1556,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 14,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 575,
@@ -1480,7 +1597,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 557,
+    "forks": 64,
+    "language": "Go"
   },
   {
     "id": 574,
@@ -1517,7 +1637,10 @@
     ],
     "categories": [
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 99,
+    "forks": 13,
+    "language": "JavaScript"
   },
   {
     "id": 573,
@@ -1555,7 +1678,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 54,
+    "forks": 2,
+    "language": "JavaScript"
   },
   {
     "id": 572,
@@ -1592,7 +1718,10 @@
     ],
     "categories": [
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 571,
@@ -1627,7 +1756,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 15,
+    "forks": 2,
+    "language": "Makefile"
   },
   {
     "id": 570,
@@ -1665,7 +1797,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 23,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 569,
@@ -1702,7 +1837,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 568,
@@ -1742,7 +1880,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 31,
+    "forks": 5,
+    "language": "Rust"
   },
   {
     "id": 567,
@@ -1780,7 +1921,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 566,
@@ -1819,7 +1963,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 13,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 565,
@@ -1856,7 +2003,10 @@
     ],
     "categories": [
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 573,
+    "forks": 33,
+    "language": "Python"
   },
   {
     "id": 564,
@@ -1884,7 +2034,10 @@
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 563,
@@ -1922,7 +2075,10 @@
     "categories": [
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 17,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 562,
@@ -1961,7 +2117,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 28,
+    "forks": 2,
+    "language": "TypeScript"
   },
   {
     "id": 561,
@@ -1999,7 +2158,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 14,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 560,
@@ -2036,7 +2198,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 22,
+    "forks": 8,
+    "language": "TypeScript"
   },
   {
     "id": 559,
@@ -2073,7 +2238,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 558,
@@ -2112,7 +2280,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 28,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 557,
@@ -2152,7 +2323,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 16,
+    "forks": 0,
+    "language": "Go"
   },
   {
     "id": 556,
@@ -2191,7 +2365,10 @@
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 14,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 555,
@@ -2229,7 +2406,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 14,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 554,
@@ -2253,7 +2433,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 553,
@@ -2294,7 +2477,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 59,
+    "forks": 9,
+    "language": "Kotlin"
   },
   {
     "id": 552,
@@ -2331,7 +2517,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 551,
@@ -2372,7 +2561,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 550,
@@ -2409,7 +2601,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 62,
+    "forks": 10,
+    "language": "TypeScript"
   },
   {
     "id": 549,
@@ -2444,7 +2639,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 16,
+    "forks": 3,
+    "language": "Makefile"
   },
   {
     "id": 548,
@@ -2479,7 +2677,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 166,
+    "forks": 11,
+    "language": null
   },
   {
     "id": 547,
@@ -2518,7 +2719,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 15,
+    "forks": 10,
+    "language": "HTML"
   },
   {
     "id": 546,
@@ -2556,7 +2760,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 7,
+    "forks": 3,
+    "language": "Python"
   },
   {
     "id": 545,
@@ -2594,7 +2801,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "Vue"
   },
   {
     "id": 544,
@@ -2633,7 +2843,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 36,
+    "forks": 6,
+    "language": "Python"
   },
   {
     "id": 543,
@@ -2668,7 +2881,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 25,
+    "forks": 3,
+    "language": "TypeScript"
   },
   {
     "id": 542,
@@ -2706,7 +2922,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 12,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 541,
@@ -2744,7 +2963,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 25,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 539,
@@ -2779,7 +3001,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 538,
@@ -2801,7 +3026,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 537,
@@ -2842,7 +3070,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1287,
+    "forks": 47,
+    "language": "Go"
   },
   {
     "id": 536,
@@ -2880,7 +3111,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 36654,
+    "forks": 6548,
+    "language": "TypeScript"
   },
   {
     "id": 535,
@@ -2918,7 +3152,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 1621,
+    "forks": 77,
+    "language": "Rust"
   },
   {
     "id": 534,
@@ -2955,7 +3192,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 19,
+    "forks": 1,
+    "language": "C#"
   },
   {
     "id": 533,
@@ -2990,7 +3230,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 8983,
+    "forks": 1422,
+    "language": "HTML"
   },
   {
     "id": 531,
@@ -3028,7 +3271,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 14,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 530,
@@ -3068,7 +3314,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 9,
+    "forks": 3,
+    "language": "JavaScript"
   },
   {
     "id": 529,
@@ -3109,7 +3358,10 @@
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 44,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 528,
@@ -3147,7 +3399,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 35,
+    "forks": 12,
+    "language": "Python"
   },
   {
     "id": 527,
@@ -3184,7 +3439,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 35,
+    "forks": 3,
+    "language": "Go"
   },
   {
     "id": 526,
@@ -3222,7 +3480,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 31,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 525,
@@ -3266,7 +3527,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 49148,
+    "forks": 2455,
+    "language": "TypeScript"
   },
   {
     "id": 524,
@@ -3303,7 +3567,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 84461,
+    "forks": 8765,
+    "language": null
   },
   {
     "id": 523,
@@ -3340,7 +3607,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 73,
+    "forks": 4,
+    "language": "QML"
   },
   {
     "id": 522,
@@ -3377,7 +3647,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 20,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 521,
@@ -3405,7 +3678,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 520,
@@ -3442,7 +3718,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 423,
+    "forks": 59,
+    "language": "TypeScript"
   },
   {
     "id": 519,
@@ -3480,7 +3759,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 13,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 518,
@@ -3518,7 +3800,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 14,
+    "forks": 4,
+    "language": "HTML"
   },
   {
     "id": 517,
@@ -3555,7 +3840,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 6,
+    "forks": 1,
+    "language": "Vue"
   },
   {
     "id": 516,
@@ -3593,7 +3881,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Shell"
   },
   {
     "id": 515,
@@ -3632,7 +3923,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 38,
+    "forks": 2,
+    "language": "Shell"
   },
   {
     "id": 514,
@@ -3670,7 +3964,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 513,
@@ -3711,7 +4008,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 11,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 512,
@@ -3753,7 +4053,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 2355,
+    "forks": 252,
+    "language": "PHP"
   },
   {
     "id": 511,
@@ -3790,7 +4093,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 34,
+    "forks": 1,
+    "language": null
   },
   {
     "id": 510,
@@ -3828,7 +4134,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Kotlin"
   },
   {
     "id": 509,
@@ -3865,7 +4174,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Shell"
   },
   {
     "id": 508,
@@ -3902,7 +4214,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "Kotlin"
   },
   {
     "id": 507,
@@ -3943,7 +4258,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 14,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 506,
@@ -3981,7 +4299,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 505,
@@ -4021,7 +4342,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 66123,
+    "forks": 4346,
+    "language": "TypeScript"
   },
   {
     "id": 504,
@@ -4059,7 +4383,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 14810,
+    "forks": 1794,
+    "language": "TypeScript"
   },
   {
     "id": 503,
@@ -4095,7 +4422,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 15,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 502,
@@ -4136,7 +4466,10 @@
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 24,
+    "forks": 3,
+    "language": "Dart"
   },
   {
     "id": 501,
@@ -4175,7 +4508,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 19,
+    "forks": 4,
+    "language": "Python"
   },
   {
     "id": 500,
@@ -4212,7 +4548,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 4638,
+    "forks": 582,
+    "language": "TypeScript"
   },
   {
     "id": 499,
@@ -4252,7 +4591,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 498,
@@ -4292,7 +4634,10 @@
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 11,
+    "forks": 1,
+    "language": "CSS"
   },
   {
     "id": 497,
@@ -4331,7 +4676,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 14,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 496,
@@ -4370,7 +4718,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 11,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 494,
@@ -4407,7 +4758,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 24,
+    "forks": 0,
+    "language": "Vue"
   },
   {
     "id": 493,
@@ -4445,7 +4799,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 17,
+    "forks": 3,
+    "language": null
   },
   {
     "id": 492,
@@ -4487,7 +4844,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 6,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 491,
@@ -4526,7 +4886,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 9929,
+    "forks": 852,
+    "language": "Python"
   },
   {
     "id": 490,
@@ -4548,7 +4911,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 488,
@@ -4586,7 +4952,10 @@
     "categories": [
       "فیلترشکن، پروکسی و شبکه",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 145,
+    "forks": 5,
+    "language": "Kotlin"
   },
   {
     "id": 487,
@@ -4624,7 +4993,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 12448,
+    "forks": 558,
+    "language": null
   },
   {
     "id": 486,
@@ -4661,7 +5033,10 @@
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 1538,
+    "forks": 85,
+    "language": "Go"
   },
   {
     "id": 485,
@@ -4699,7 +5074,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 3,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 483,
@@ -4738,7 +5116,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 386,
+    "forks": 51,
+    "language": "Kotlin"
   },
   {
     "id": 482,
@@ -4777,7 +5158,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 20,
+    "forks": 1,
+    "language": "Kotlin"
   },
   {
     "id": 481,
@@ -4816,7 +5200,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 6,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 480,
@@ -4840,7 +5227,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 479,
@@ -4877,7 +5267,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 15,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 478,
@@ -4915,7 +5308,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1655,
+    "forks": 141,
+    "language": "Python"
   },
   {
     "id": 477,
@@ -4956,7 +5352,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 20516,
+    "forks": 2239,
+    "language": "TypeScript"
   },
   {
     "id": 476,
@@ -4994,7 +5393,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 9,
+    "forks": 3,
+    "language": "TypeScript"
   },
   {
     "id": 475,
@@ -5031,7 +5433,10 @@
     ],
     "categories": [
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 77,
+    "forks": 10,
+    "language": "Kotlin"
   },
   {
     "id": 474,
@@ -5070,7 +5475,10 @@
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 4,
+    "forks": 1,
+    "language": "HTML"
   },
   {
     "id": 472,
@@ -5110,7 +5518,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 13,
+    "forks": 2,
+    "language": null
   },
   {
     "id": 471,
@@ -5149,7 +5560,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 32,
+    "forks": 3,
+    "language": "TypeScript"
   },
   {
     "id": 470,
@@ -5187,7 +5601,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 5,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 469,
@@ -5228,7 +5645,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 63,
+    "forks": 2,
+    "language": "Dart"
   },
   {
     "id": 468,
@@ -5251,7 +5671,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 467,
@@ -5291,7 +5714,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 11,
+    "forks": 0,
+    "language": "Shell"
   },
   {
     "id": 466,
@@ -5330,7 +5756,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 18239,
+    "forks": 2552,
+    "language": "Python"
   },
   {
     "id": 465,
@@ -5370,7 +5799,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 22,
+    "forks": 4,
+    "language": "Go"
   },
   {
     "id": 464,
@@ -5408,7 +5840,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 2,
+    "forks": 2,
+    "language": "Go"
   },
   {
     "id": 463,
@@ -5447,7 +5882,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 13,
+    "forks": 6,
+    "language": "JavaScript"
   },
   {
     "id": 462,
@@ -5484,7 +5922,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 15,
+    "forks": 2,
+    "language": "HTML"
   },
   {
     "id": 460,
@@ -5496,7 +5937,7 @@
     "text_html": "<b>انتقال فایل بین دو گوشی بدون اینترنت و حتی بدون نیاز به یک شبکه مشترک؟ </b><br/><br/>این پروژه فایل رو به مجموعه‌ای از QR Codeها تبدیل میکنه، اون‌ها رو پشت سر هم نمایش میده و گوشی دوم با دوربین اسکنشون میکنه تا فایل دوباره ساخته بشه.<br/><br/><a href=\"https://github.com/bashalarmistalt/decimen-optical-transfer/\" rel=\"noopener\" target=\"_blank\">https://github.com/bashalarmistalt/decimen-optical-transfer/</a><br/><br/><a href=\"https://t.me/RepoFA\" target=\"_blank\">@RepoFA</a>",
     "text_plain": "انتقال فایل بین دو گوشی بدون اینترنت و حتی بدون نیاز به یک شبکه مشترک؟ \nاین پروژه فایل رو به مجموعه‌ای از QR Codeها تبدیل میکنه، اون‌ها رو پشت سر هم نمایش میده و گوشی دوم با دوربین اسکنشون میکنه تا فایل دوباره ساخته بشه.\nhttps://github.com/bashalarmistalt/decimen-optical-transfer/\n@RepoFA",
     "photos": [],
-    "views": "4.63K",
+    "views": "4.64K",
     "github_links": [
       "https://github.com/bashalarmistalt/decimen-optical-transfer/"
     ],
@@ -5521,7 +5962,10 @@
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 6720,
+    "forks": 811,
+    "language": "TypeScript"
   },
   {
     "id": 459,
@@ -5559,7 +6003,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 43,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 458,
@@ -5594,7 +6041,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "HTML"
   },
   {
     "id": 457,
@@ -5632,7 +6082,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 456,
@@ -5670,7 +6123,10 @@
     "categories": [
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 49,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 455,
@@ -5708,7 +6164,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 46,
+    "forks": 2,
+    "language": "Kotlin"
   },
   {
     "id": 454,
@@ -5751,7 +6210,10 @@
       "لینوکس و سیستم‌عامل",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 453,
@@ -5791,7 +6253,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 11679,
+    "forks": 1816,
+    "language": "JavaScript"
   },
   {
     "id": 452,
@@ -5830,7 +6295,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 23,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 451,
@@ -5868,7 +6336,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 4712,
+    "forks": 642,
+    "language": "Python"
   },
   {
     "id": 450,
@@ -5906,7 +6377,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 81,
+    "forks": 5,
+    "language": "Python"
   },
   {
     "id": 449,
@@ -5942,7 +6416,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 20,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 448,
@@ -5979,7 +6456,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 447,
@@ -6017,7 +6497,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 446,
@@ -6056,7 +6539,10 @@
       "ابزارهای توسعه و CLI",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 445,
@@ -6093,7 +6579,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 381,
+    "forks": 29,
+    "language": "Rust"
   },
   {
     "id": 444,
@@ -6130,7 +6619,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 13,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 443,
@@ -6167,7 +6659,10 @@
     ],
     "categories": [
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 442,
@@ -6204,7 +6699,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 25,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 441,
@@ -6242,7 +6740,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 203,
+    "forks": 13,
+    "language": "HTML"
   },
   {
     "id": 440,
@@ -6282,7 +6783,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 438,
@@ -6322,7 +6826,10 @@
       "فرانت‌اند و UI",
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 437,
@@ -6361,7 +6868,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 4533,
+    "forks": 364,
+    "language": "TypeScript"
   },
   {
     "id": 436,
@@ -6401,7 +6911,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 20,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 435,
@@ -6438,7 +6951,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 434,
@@ -6476,7 +6992,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "HTML"
   },
   {
     "id": 433,
@@ -6514,7 +7033,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 432,
@@ -6551,7 +7073,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 431,
@@ -6590,7 +7115,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 1217,
+    "forks": 201,
+    "language": null
   },
   {
     "id": 430,
@@ -6604,7 +7132,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/mvEb9h7Z6fVGjM9YJ29GV3hOi2dzT77vapZWn3z4m_koKIvHdMjB7s2gag1JXe__H72bJhsUvww_hh4poQFfZlpxyiATeddH83AKC4OkMS3L2IZlVCHVaQaDXCX2gOnpGYZx8cN7z5PnEfcf8OOmlO9Iq2HHWAx6jSD7uIMcP5hnOvAc23gkpIrIMELffOxDvF8JLCZVRaGdI7yFaEJJiWN0n7asc_GS8PJLvZOGbkF-0PDT-nl46RdLjmhN4wPbT1X4uVFP81vs3mvnF6ul9Omw5BiGu4dJYiOHPAIQX4qdYOPxA1gtr_EkXiJ9tgafsvFZ03E1W5vUET4JXw6PGA.jpg"
     ],
-    "views": "6.53K",
+    "views": "6.54K",
     "github_links": [
       "https://github.com/Andromeda-Collective/andro-cfw"
     ],
@@ -6629,7 +7157,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 35,
+    "forks": 4,
+    "language": "Python"
   },
   {
     "id": 429,
@@ -6668,7 +7199,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 9,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 427,
@@ -6708,7 +7242,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 13,
+    "forks": 2,
+    "language": "Shell"
   },
   {
     "id": 426,
@@ -6722,7 +7259,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/MbJ40eBWnBoRyZjPsof2hODBah3tp6QUnocrUAkjN5kXsXg4vZiwc5OQNtN5CsevoIylTJivRaoCWzSxGkBjJ_F2WvAv9zqfYtSd4IABVrKFH6CbTlQWl-ujhilnIKh0fmAtlZXDMd3Tz2e8RszQs82kiilZACDoqX4vjsOMEyiQtGINl8lbAnkGI6GMmzSWli3h7pCeFpkpQOcl_9v1xuvW4Q8wtq8USqpDoZCD7WaJg3M05M_cb5hpxJe8jlMOgAmBuNZsyIxG1nWAYNqQb7ety-HPQi_CoAXuPKFTjNXmbsZTciDwRrIr8-0x47UJAm-HN3sKOYJZPXRQeUXGSg.jpg"
     ],
-    "views": "4.44K",
+    "views": "4.45K",
     "github_links": [
       "https://github.com/RemoProject/EasyID-Project"
     ],
@@ -6745,7 +7282,10 @@
     ],
     "categories": [
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 18,
+    "forks": 3,
+    "language": "TypeScript"
   },
   {
     "id": 425,
@@ -6782,7 +7322,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 25,
+    "forks": 2,
+    "language": "HTML"
   },
   {
     "id": 424,
@@ -6820,7 +7363,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 14,
+    "forks": 3,
+    "language": "JavaScript"
   },
   {
     "id": 423,
@@ -6857,7 +7403,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 3,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 422,
@@ -6898,7 +7447,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 29,
+    "forks": 5,
+    "language": "Python"
   },
   {
     "id": 420,
@@ -6920,7 +7472,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 419,
@@ -6958,7 +7513,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 25,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 418,
@@ -6996,7 +7554,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": "C++"
   },
   {
     "id": 417,
@@ -7036,7 +7597,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 8,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 416,
@@ -7072,7 +7636,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 23,
+    "forks": 2,
+    "language": "Rust"
   },
   {
     "id": 415,
@@ -7108,7 +7675,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 125,
+    "forks": 7,
+    "language": "TypeScript"
   },
   {
     "id": 414,
@@ -7122,7 +7692,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/E2FEyyOQqTmQyykWBehpgxqq6RytW9sQ8zhyBFnQHl8bzDW4wxWmCMDRsHk1m2ZvlKoHx3324qlXf6AKH38ZbVKCYIE_sYMm8G3BwZMWMqnFphiLlCfa5u-Wvt_99LDuYLcF9rkW1FDmOaAVt4RXmV0hibk_f8GsAI0Wh7IJD-7w4mcxq0OmcsD8X6JTme_7_eoL0XUjfgOUpIm9MTb1OuHYNUMauPDycIlyMmiIM3jcEsthTZ-hBa0VdhYWhS5KmGOCgf-aWLqYWsILlROfG_Cd-FJzDJQVqIxFWK4yBiJRZVKzNIw63-6uuLJcojJpLusn3PmFt_sS0_yh3ZTbYQ.jpg"
     ],
-    "views": "4.53K",
+    "views": "4.54K",
     "github_links": [
       "https://github.com/AsaEdgerunner/git-course-fa"
     ],
@@ -7145,7 +7715,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 65,
+    "forks": 5,
+    "language": null
   },
   {
     "id": 413,
@@ -7183,7 +7756,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 8,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 412,
@@ -7205,7 +7781,10 @@
     "repo_details": [],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 411,
@@ -7246,7 +7825,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 43,
+    "forks": 2,
+    "language": "Go"
   },
   {
     "id": 409,
@@ -7284,7 +7866,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 201,
+    "forks": 10,
+    "language": "TypeScript"
   },
   {
     "id": 408,
@@ -7322,7 +7907,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 3487,
+    "forks": 312,
+    "language": "HTML"
   },
   {
     "id": 407,
@@ -7344,7 +7932,10 @@
     "repo_details": [],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 406,
@@ -7382,7 +7973,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 404,
@@ -7421,7 +8015,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 4,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 403,
@@ -7457,7 +8054,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 64,
+    "forks": 3,
+    "language": "Python"
   },
   {
     "id": 402,
@@ -7494,7 +8094,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 6,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 401,
@@ -7533,7 +8136,10 @@
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 202,
+    "forks": 6,
+    "language": "Rust"
   },
   {
     "id": 400,
@@ -7572,7 +8178,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 28,
+    "forks": 2,
+    "language": "TypeScript"
   },
   {
     "id": 399,
@@ -7608,7 +8217,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 13,
+    "forks": 2,
+    "language": "JavaScript"
   },
   {
     "id": 398,
@@ -7645,7 +8257,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 28,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 397,
@@ -7681,7 +8296,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 16,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 396,
@@ -7718,7 +8336,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 395,
@@ -7757,7 +8378,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 22,
+    "forks": 4,
+    "language": "HTML"
   },
   {
     "id": 394,
@@ -7797,7 +8421,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 1105,
+    "forks": 146,
+    "language": "TypeScript"
   },
   {
     "id": 393,
@@ -7835,7 +8462,10 @@
     "categories": [
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 660,
+    "forks": 122,
+    "language": "JavaScript"
   },
   {
     "id": 392,
@@ -7874,7 +8504,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 88,
+    "forks": 5,
+    "language": "Python"
   },
   {
     "id": 391,
@@ -7912,7 +8545,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 16380,
+    "forks": 1182,
+    "language": "TypeScript"
   },
   {
     "id": 390,
@@ -7953,7 +8589,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 3007,
+    "forks": 344,
+    "language": "TypeScript"
   },
   {
     "id": 389,
@@ -7990,7 +8629,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 71,
+    "forks": 6,
+    "language": "HTML"
   },
   {
     "id": 388,
@@ -8026,7 +8668,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 16,
+    "forks": 1,
+    "language": "HTML"
   },
   {
     "id": 387,
@@ -8062,7 +8707,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 115,
+    "forks": 21,
+    "language": "Shell"
   },
   {
     "id": 386,
@@ -8104,7 +8752,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 20,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 385,
@@ -8141,7 +8792,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 384,
@@ -8178,7 +8832,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 1,
+    "forks": 0,
+    "language": "Shell"
   },
   {
     "id": 383,
@@ -8216,7 +8873,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 6,
+    "forks": 1,
+    "language": "C"
   },
   {
     "id": 382,
@@ -8253,7 +8913,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 22,
+    "forks": 3,
+    "language": "Lua"
   },
   {
     "id": 379,
@@ -8278,7 +8941,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 378,
@@ -8292,7 +8958,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/FbtjVdH74g-wQYeroQmQ2ZwNlhVVpzUvEczwWY1brnjD6cDtlIGf32xA3eVILklc9XsaMsX3Eckgb2NcNvkeDksDG-Ur_VKaRGS7oEPUgI0mCcgTfyliVTpL9FQ4MGXRoAbVQi7EVKW7XFSalLIXlBxQ26oo4sl8f1ikiGUC0H7_mHQOwGx2z3oP2Y92OR5jlgRz1m4FnFLC228jVg4kw0Hjy4JiWcoHq886U_4B534mSknU-SBdKnkLY8MPIykr0I0AuMMxa9O6IwuR_PX6dMqhmDAC48QjvR7g1hECjf5NHmkvkPk9oGIVFyXGXBJIfHhncZXl35PB4nAFJ0cXpQ.jpg"
     ],
-    "views": "5.01K",
+    "views": "5.02K",
     "github_links": [
       "https://github.com/ArminAndalib/TCP-Hunter"
     ],
@@ -8317,7 +8983,10 @@
       "بک‌اند و میکروسرویس",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 377,
@@ -8339,7 +9008,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 376,
@@ -8377,7 +9049,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 21,
+    "forks": 2,
+    "language": "HTML"
   },
   {
     "id": 375,
@@ -8417,7 +9092,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 23,
+    "forks": 5,
+    "language": "Python"
   },
   {
     "id": 374,
@@ -8457,7 +9135,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 115,
+    "forks": 8,
+    "language": "JavaScript"
   },
   {
     "id": 372,
@@ -8494,7 +9175,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 26,
+    "forks": 5,
+    "language": "Vue"
   },
   {
     "id": 371,
@@ -8535,7 +9219,10 @@
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 195,
+    "forks": 20,
+    "language": "Rust"
   },
   {
     "id": 370,
@@ -8575,7 +9262,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 12,
+    "forks": 2,
+    "language": "Kotlin"
   },
   {
     "id": 369,
@@ -8613,7 +9303,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 212,
+    "forks": 472,
+    "language": "JavaScript"
   },
   {
     "id": 368,
@@ -8651,7 +9344,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 5,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 367,
@@ -8690,7 +9386,10 @@
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 14,
+    "forks": 2,
+    "language": "C#"
   },
   {
     "id": 366,
@@ -8729,7 +9428,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 32,
+    "forks": 1,
+    "language": "Kotlin"
   },
   {
     "id": 365,
@@ -8766,7 +9468,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 239,
+    "forks": 45,
+    "language": "TypeScript"
   },
   {
     "id": 364,
@@ -8803,7 +9508,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 363,
@@ -8840,7 +9548,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 362,
@@ -8879,7 +9590,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 361,
@@ -8916,7 +9630,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 15,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 360,
@@ -8953,7 +9670,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 23,
+    "forks": 2,
+    "language": "Rust"
   },
   {
     "id": 359,
@@ -8993,7 +9713,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 387,
+    "forks": 23,
+    "language": "JavaScript"
   },
   {
     "id": 358,
@@ -9031,7 +9754,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 7,
+    "forks": 1,
+    "language": "HTML"
   },
   {
     "id": 357,
@@ -9068,7 +9794,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1123,
+    "forks": 109,
+    "language": null
   },
   {
     "id": 356,
@@ -9104,7 +9833,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 24,
+    "forks": 5,
+    "language": "Shell"
   },
   {
     "id": 355,
@@ -9142,7 +9874,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "Rust"
   },
   {
     "id": 354,
@@ -9177,7 +9912,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 7,
+    "forks": 1,
+    "language": "Jupyter Notebook"
   },
   {
     "id": 352,
@@ -9217,7 +9955,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 19,
+    "forks": 7,
+    "language": "TypeScript"
   },
   {
     "id": 351,
@@ -9254,7 +9995,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 30,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 350,
@@ -9291,7 +10035,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Jupyter Notebook"
   },
   {
     "id": 349,
@@ -9332,7 +10079,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 64375,
+    "forks": 8972,
+    "language": "TypeScript"
   },
   {
     "id": 348,
@@ -9371,7 +10121,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 134955,
+    "forks": 7224,
+    "language": "JavaScript"
   },
   {
     "id": 347,
@@ -9408,7 +10161,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 34,
+    "forks": 4,
+    "language": "TypeScript"
   },
   {
     "id": 346,
@@ -9446,7 +10202,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 114117,
+    "forks": 12420,
+    "language": "Python"
   },
   {
     "id": 345,
@@ -9483,7 +10242,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 13,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 344,
@@ -9520,7 +10282,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 41,
+    "forks": 7,
+    "language": "Go"
   },
   {
     "id": 343,
@@ -9557,7 +10322,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 342,
@@ -9595,7 +10363,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 181,
+    "forks": 21,
+    "language": "C#"
   },
   {
     "id": 341,
@@ -9634,7 +10405,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 45,
+    "forks": 9,
+    "language": null
   },
   {
     "id": 340,
@@ -9670,7 +10444,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 76,
+    "forks": 2,
+    "language": "Rust"
   },
   {
     "id": 339,
@@ -9708,7 +10485,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 116789,
+    "forks": 11278,
+    "language": "Python"
   },
   {
     "id": 338,
@@ -9750,7 +10530,10 @@
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 2377,
+    "forks": 116,
+    "language": "Go"
   },
   {
     "id": 337,
@@ -9790,7 +10573,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 151,
+    "forks": 29,
+    "language": "JavaScript"
   },
   {
     "id": 335,
@@ -9810,8 +10596,8 @@
     "tags": [],
     "primary_repo": "keyaruga33/pasban_db",
     "repo_names": [
-      "keyaruga33/pasban_db",
-      "keyaruga33/pasban-py"
+      "keyaruga33/pasban-py",
+      "keyaruga33/pasban_db"
     ],
     "authors": [
       "keyaruga33"
@@ -9835,7 +10621,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 75,
+    "forks": 1,
+    "language": null
   },
   {
     "id": 334,
@@ -9875,7 +10664,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 11,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 333,
@@ -9914,7 +10706,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 5,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 332,
@@ -9952,7 +10747,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 70,
+    "forks": 8,
+    "language": "Dart"
   },
   {
     "id": 331,
@@ -9991,7 +10789,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 181,
+    "forks": 14,
+    "language": "C#"
   },
   {
     "id": 330,
@@ -10026,7 +10827,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 36759,
+    "forks": 3311,
+    "language": "Python"
   },
   {
     "id": 329,
@@ -10063,7 +10867,10 @@
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 3,
+    "forks": 0,
+    "language": "Crystal"
   },
   {
     "id": 328,
@@ -10104,7 +10911,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 19,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 327,
@@ -10139,7 +10949,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 22,
+    "forks": 4,
+    "language": "HTML"
   },
   {
     "id": 325,
@@ -10176,7 +10989,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 28,
+    "forks": 4,
+    "language": "Rust"
   },
   {
     "id": 324,
@@ -10215,7 +11031,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 4043,
+    "forks": 498,
+    "language": "C"
   },
   {
     "id": 323,
@@ -10252,7 +11071,10 @@
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 322,
@@ -10289,7 +11111,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 28,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 318,
@@ -10326,7 +11151,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 28,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 317,
@@ -10364,7 +11192,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 21,
+    "forks": 4,
+    "language": "HTML"
   },
   {
     "id": 316,
@@ -10386,7 +11217,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 315,
@@ -10422,7 +11256,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 92,
+    "forks": 6,
+    "language": null
   },
   {
     "id": 314,
@@ -10460,7 +11297,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 13,
+    "forks": 2,
+    "language": null
   },
   {
     "id": 313,
@@ -10498,7 +11338,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 312,
@@ -10536,7 +11379,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Go"
   },
   {
     "id": 310,
@@ -10563,7 +11409,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 309,
@@ -10600,7 +11449,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 9730,
+    "forks": 822,
+    "language": "Rust"
   },
   {
     "id": 308,
@@ -10639,7 +11491,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 26,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 307,
@@ -10677,7 +11532,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 12277,
+    "forks": 954,
+    "language": "Python"
   },
   {
     "id": 306,
@@ -10716,7 +11574,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 4628,
+    "forks": 524,
+    "language": "TypeScript"
   },
   {
     "id": 305,
@@ -10738,7 +11599,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 304,
@@ -10773,7 +11637,10 @@
     ],
     "categories": [
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 67,
+    "forks": 10,
+    "language": "Python"
   },
   {
     "id": 303,
@@ -10813,7 +11680,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 249,
+    "forks": 1226,
+    "language": "Python"
   },
   {
     "id": 302,
@@ -10849,7 +11719,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 11,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 301,
@@ -10889,7 +11762,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 15,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 300,
@@ -10928,7 +11804,10 @@
       "ابزارهای توسعه و CLI",
       "بات‌های تلگرام و پیام‌رسان",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 299,
@@ -10942,7 +11821,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/UHLl7A2ZKtrv2KF8m8JwGdPmTsXNHQmpQyPZLRLkvDbMXHIqob3j_X8mOAtMJP-iGVfLpQY3zqNxCx0fsInP31rBhEsuS98iIeYc4PeluM5APjiYWxGLnf-mYi0yfuShDsqdsSw0lHq92xOiNkie9A6IccbTnqxqYKAHGSCDZC9EKLDCZNTpPwuJ5iUxvoNqwgbY_TRSsVGySIBR4Zy1paRiNFmfI4vy72ocROYku_eD9bnYRzEg07YlTMS6ToaGJNSdy83zhjrU8RRHMNWBqyhaKlxWfd18fiJFVY3DhI2tVWd-Xc2DhEx4aB3WZNm3GfPa2U5JberiOIFREdYS3A.jpg"
     ],
-    "views": "3.84K",
+    "views": "3.85K",
     "github_links": [
       "https://github.com/chatwoot/chatwoot"
     ],
@@ -10966,7 +11845,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 36680,
+    "forks": 8556,
+    "language": "Ruby"
   },
   {
     "id": 298,
@@ -11003,7 +11885,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 6610,
+    "forks": 359,
+    "language": "Python"
   },
   {
     "id": 297,
@@ -11042,7 +11927,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 54166,
+    "forks": 9395,
+    "language": "Python"
   },
   {
     "id": 296,
@@ -11078,7 +11966,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 73,
+    "forks": 3,
+    "language": "TypeScript"
   },
   {
     "id": 295,
@@ -11117,7 +12008,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 5,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 294,
@@ -11155,7 +12049,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 25,
+    "forks": 3,
+    "language": "PowerShell"
   },
   {
     "id": 293,
@@ -11195,7 +12092,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 23,
+    "forks": 2,
+    "language": "Shell"
   },
   {
     "id": 292,
@@ -11233,7 +12133,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 5,
+    "forks": 0,
+    "language": "Swift"
   },
   {
     "id": 291,
@@ -11269,7 +12172,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 290,
@@ -11308,7 +12214,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 289,
@@ -11347,7 +12256,10 @@
       "فرانت‌اند و UI",
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 29,
+    "forks": 2,
+    "language": "Kotlin"
   },
   {
     "id": 288,
@@ -11387,7 +12299,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 923,
+    "forks": 48,
+    "language": "TypeScript"
   },
   {
     "id": 287,
@@ -11411,7 +12326,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 286,
@@ -11450,7 +12368,10 @@
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 3742,
+    "forks": 295,
+    "language": "Kotlin"
   },
   {
     "id": 285,
@@ -11489,7 +12410,10 @@
       "فرانت‌اند و UI",
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 284,
@@ -11527,7 +12451,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 47824,
+    "forks": 8710,
+    "language": "Ruby"
   },
   {
     "id": 283,
@@ -11551,7 +12478,10 @@
     "repo_details": [],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 282,
@@ -11588,7 +12518,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 189,
+    "forks": 44,
+    "language": "TypeScript"
   },
   {
     "id": 281,
@@ -11625,7 +12558,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 84,
+    "forks": 2,
+    "language": "HTML"
   },
   {
     "id": 280,
@@ -11660,7 +12596,10 @@
     ],
     "categories": [
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 25,
+    "forks": 5,
+    "language": "PHP"
   },
   {
     "id": 279,
@@ -11699,7 +12638,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 1308,
+    "forks": 108,
+    "language": "TypeScript"
   },
   {
     "id": 278,
@@ -11737,7 +12679,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 11,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 277,
@@ -11776,7 +12721,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 6,
+    "forks": 2,
+    "language": "JavaScript"
   },
   {
     "id": 276,
@@ -11815,7 +12763,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 54,
+    "forks": 4,
+    "language": "Go"
   },
   {
     "id": 275,
@@ -11852,7 +12803,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 97,
+    "forks": 5,
+    "language": "TypeScript"
   },
   {
     "id": 274,
@@ -11866,7 +12820,7 @@
     "photos": [
       "https://cdn4.telesco.pe/file/M_hfwoxvKcRyuxJQu0cABOpvfGFiv0kmjEHXCxKOZsmmJLcr6gYeTJs-h9blNWQKzmAiOGN4YzlPFYSER6nega-G_VQaJ6RhmtPdpa6-kkMX3aKxxEpps95u-2Yu_Y5j374mWLIwVrCFw3pp_sMA8tIv0YNdOQyLp8SeTO29uzGDa3bQcuduH_J4rYNMTwvmznpx-7nmB7du73ft-Sq7yJfWAEa_FseJpZa09DfL6jRqETgZr2W2GxpMqaPqtgxBOF9rLwKQbewWZPigNkBsQsiQd34OYsb9yDZAxLa_VRhgtQO-amzCIIw4OouRYfDqSeP5VdMQn4_Hz2IxW6gwbQ.jpg"
     ],
-    "views": "4.69K",
+    "views": "4.7K",
     "github_links": [
       "https://github.com/neuml/txtai"
     ],
@@ -11892,7 +12846,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 12943,
+    "forks": 887,
+    "language": "Python"
   },
   {
     "id": 273,
@@ -11931,7 +12888,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 10,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 272,
@@ -11967,7 +12927,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 18239,
+    "forks": 2552,
+    "language": "Python"
   },
   {
     "id": 271,
@@ -12003,7 +12966,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 68,
+    "forks": 2,
+    "language": "TypeScript"
   },
   {
     "id": 270,
@@ -12040,7 +13006,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 136,
+    "forks": 16,
+    "language": "Rust"
   },
   {
     "id": 269,
@@ -12078,7 +13047,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 37,
+    "forks": 5,
+    "language": "Shell"
   },
   {
     "id": 268,
@@ -12115,7 +13087,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 17,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 267,
@@ -12153,7 +13128,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 12,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 266,
@@ -12191,7 +13169,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 22,
+    "forks": 3,
+    "language": "Lua"
   },
   {
     "id": 265,
@@ -12229,7 +13210,10 @@
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 110,
+    "forks": 14,
+    "language": "Python"
   },
   {
     "id": 264,
@@ -12268,7 +13252,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 13622,
+    "forks": 1426,
+    "language": "TypeScript"
   },
   {
     "id": 263,
@@ -12305,7 +13292,10 @@
     ],
     "categories": [
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 262,
@@ -12342,7 +13332,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 27,
+    "forks": 2,
+    "language": "TypeScript"
   },
   {
     "id": 261,
@@ -12377,7 +13370,10 @@
     ],
     "categories": [
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 16,
+    "forks": 4,
+    "language": "TeX"
   },
   {
     "id": 260,
@@ -12413,7 +13409,10 @@
     "categories": [
       "فیلترشکن، پروکسی و شبکه",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 17,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 259,
@@ -12448,7 +13447,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 19,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 257,
@@ -12483,7 +13485,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 1,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 255,
@@ -12520,7 +13525,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 254,
@@ -12542,7 +13550,10 @@
     "repo_details": [],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 253,
@@ -12577,7 +13588,10 @@
     ],
     "categories": [
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 63,
+    "forks": 2,
+    "language": "Dart"
   },
   {
     "id": 252,
@@ -12612,7 +13626,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 251,
@@ -12650,7 +13667,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 49476,
+    "forks": 7450,
+    "language": "JavaScript"
   },
   {
     "id": 250,
@@ -12688,7 +13708,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 249,
@@ -12727,7 +13750,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 31393,
+    "forks": 2081,
+    "language": null
   },
   {
     "id": 248,
@@ -12764,7 +13790,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 12,
+    "forks": 2,
+    "language": "Python"
   },
   {
     "id": 246,
@@ -12802,7 +13831,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 7,
+    "forks": 3,
+    "language": "PHP"
   },
   {
     "id": 245,
@@ -12842,7 +13874,10 @@
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Shell"
   },
   {
     "id": 244,
@@ -12864,7 +13899,10 @@
     "repo_details": [],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 243,
@@ -12901,7 +13939,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 242,
@@ -12938,7 +13979,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 241,
@@ -12975,7 +14019,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 93427,
+    "forks": 9904,
+    "language": "JavaScript"
   },
   {
     "id": 240,
@@ -13014,7 +14061,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 26783,
+    "forks": 2224,
+    "language": "Python"
   },
   {
     "id": 239,
@@ -13054,7 +14104,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 4394,
+    "forks": 174,
+    "language": "TypeScript"
   },
   {
     "id": 236,
@@ -13094,7 +14147,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 6,
+    "forks": 0,
+    "language": "Rust"
   },
   {
     "id": 235,
@@ -13132,7 +14188,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 234,
@@ -13169,7 +14228,10 @@
     ],
     "categories": [
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 19,
+    "forks": 6,
+    "language": "Python"
   },
   {
     "id": 233,
@@ -13206,7 +14268,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 1637,
+    "forks": 217,
+    "language": "TypeScript"
   },
   {
     "id": 232,
@@ -13245,7 +14310,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 9175,
+    "forks": 1002,
+    "language": "TypeScript"
   },
   {
     "id": 231,
@@ -13280,7 +14348,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 230,
@@ -13319,7 +14390,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 65718,
+    "forks": 4723,
+    "language": "Dockerfile"
   },
   {
     "id": 229,
@@ -13358,7 +14432,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 80080,
+    "forks": 8044,
+    "language": "Python"
   },
   {
     "id": 228,
@@ -13393,7 +14470,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 135230,
+    "forks": 11972,
+    "language": "Python"
   },
   {
     "id": 227,
@@ -13431,7 +14511,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 30,
+    "forks": 6,
+    "language": "TypeScript"
   },
   {
     "id": 226,
@@ -13468,7 +14551,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 12144,
+    "forks": 1097,
+    "language": "Go"
   },
   {
     "id": 225,
@@ -13508,7 +14594,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 1980,
+    "forks": 149,
+    "language": "CSS"
   },
   {
     "id": 224,
@@ -13544,7 +14633,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 19,
+    "forks": 2,
+    "language": null
   },
   {
     "id": 223,
@@ -13581,7 +14673,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 24654,
+    "forks": 1294,
+    "language": "C#"
   },
   {
     "id": 222,
@@ -13616,7 +14711,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 22277,
+    "forks": 1604,
+    "language": "Go"
   },
   {
     "id": 221,
@@ -13654,7 +14752,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 24627,
+    "forks": 2964,
+    "language": "Python"
   },
   {
     "id": 220,
@@ -13693,7 +14794,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 26324,
+    "forks": 2464,
+    "language": "TypeScript"
   },
   {
     "id": 219,
@@ -13732,7 +14836,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 218,
@@ -13770,7 +14877,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 8,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 217,
@@ -13808,7 +14918,10 @@
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 24,
+    "forks": 2,
+    "language": "C"
   },
   {
     "id": 216,
@@ -13846,7 +14959,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 9453,
+    "forks": 950,
+    "language": "Python"
   },
   {
     "id": 215,
@@ -13884,7 +15000,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 13,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 214,
@@ -13921,7 +15040,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 609,
+    "forks": 107,
+    "language": null
   },
   {
     "id": 213,
@@ -13960,7 +15082,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 211,
@@ -13982,7 +15107,10 @@
     "repo_details": [],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 210,
@@ -14021,7 +15149,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 13,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 209,
@@ -14049,7 +15180,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 208,
@@ -14089,7 +15223,10 @@
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 14,
+    "forks": 0,
+    "language": "Kotlin"
   },
   {
     "id": 207,
@@ -14126,7 +15263,10 @@
     ],
     "categories": [
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 206,
@@ -14164,7 +15304,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 205,
@@ -14205,7 +15348,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 13644,
+    "forks": 1900,
+    "language": "TypeScript"
   },
   {
     "id": 204,
@@ -14243,7 +15389,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 97,
+    "forks": 5,
+    "language": "TypeScript"
   },
   {
     "id": 203,
@@ -14281,7 +15430,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1518,
+    "forks": 140,
+    "language": "JavaScript"
   },
   {
     "id": 202,
@@ -14317,7 +15469,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 2054,
+    "forks": 599,
+    "language": "TypeScript"
   },
   {
     "id": 201,
@@ -14356,7 +15511,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 1035,
+    "forks": 66,
+    "language": "Python"
   },
   {
     "id": 200,
@@ -14378,7 +15536,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 199,
@@ -14415,7 +15576,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 200,
+    "forks": 9,
+    "language": "HTML"
   },
   {
     "id": 198,
@@ -14453,7 +15617,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 197,
@@ -14491,7 +15658,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 28950,
+    "forks": 1497,
+    "language": "TypeScript"
   },
   {
     "id": 196,
@@ -14530,7 +15700,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 195,
@@ -14566,7 +15739,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 8297,
+    "forks": 369,
+    "language": "TypeScript"
   },
   {
     "id": 194,
@@ -14604,7 +15780,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 193,
@@ -14642,7 +15821,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 33003,
+    "forks": 2277,
+    "language": "JavaScript"
   },
   {
     "id": 192,
@@ -14664,7 +15846,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 191,
@@ -14702,7 +15887,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 18007,
+    "forks": 1654,
+    "language": "Go"
   },
   {
     "id": 190,
@@ -14738,7 +15926,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 478698,
+    "forks": 51402,
+    "language": "Python"
   },
   {
     "id": 189,
@@ -14776,7 +15967,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 9,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 188,
@@ -14812,7 +16006,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 923,
+    "forks": 48,
+    "language": "TypeScript"
   },
   {
     "id": 187,
@@ -14850,7 +16047,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 17,
+    "forks": 3,
+    "language": "Python"
   },
   {
     "id": 186,
@@ -14887,7 +16087,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Go"
   },
   {
     "id": 183,
@@ -14924,7 +16127,10 @@
     ],
     "categories": [
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 2,
+    "forks": 1,
+    "language": "Java"
   },
   {
     "id": 181,
@@ -14960,7 +16166,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 2671,
+    "forks": 330,
+    "language": "Python"
   },
   {
     "id": 180,
@@ -15000,7 +16209,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 38,
+    "forks": 1,
+    "language": "Java"
   },
   {
     "id": 178,
@@ -15040,7 +16252,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 2,
+    "forks": 2,
+    "language": "JavaScript"
   },
   {
     "id": 177,
@@ -15079,7 +16294,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 28,
+    "forks": 4,
+    "language": "Rust"
   },
   {
     "id": 176,
@@ -15115,7 +16333,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 18,
+    "forks": 3,
+    "language": "Python"
   },
   {
     "id": 175,
@@ -15154,7 +16375,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 13,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 174,
@@ -15191,7 +16415,10 @@
     ],
     "categories": [
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 11,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 171,
@@ -15233,7 +16460,10 @@
       "لینوکس و سیستم‌عامل",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "Rust"
   },
   {
     "id": 170,
@@ -15270,7 +16500,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 9,
+    "forks": 1,
+    "language": "Shell"
   },
   {
     "id": 169,
@@ -15292,7 +16525,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 168,
@@ -15330,7 +16566,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 12,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 167,
@@ -15367,7 +16606,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 520,
+    "forks": 15,
+    "language": "Python"
   },
   {
     "id": 166,
@@ -15405,7 +16647,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 162,
+    "forks": 72,
+    "language": null
   },
   {
     "id": 165,
@@ -15441,7 +16686,10 @@
     "categories": [
       "بات‌های تلگرام و پیام‌رسان",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 3,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 163,
@@ -15479,7 +16727,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 94761,
+    "forks": 10822,
+    "language": "JavaScript"
   },
   {
     "id": 162,
@@ -15515,7 +16766,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 161,
@@ -15555,7 +16809,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 21,
+    "forks": 2,
+    "language": "JavaScript"
   },
   {
     "id": 160,
@@ -15594,7 +16851,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 132487,
+    "forks": 19732,
+    "language": "TypeScript"
   },
   {
     "id": 159,
@@ -15634,7 +16894,10 @@
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 158,
@@ -15657,7 +16920,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 157,
@@ -15696,7 +16962,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 90524,
+    "forks": 5028,
+    "language": "Dart"
   },
   {
     "id": 156,
@@ -15734,7 +17003,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 41730,
+    "forks": 14261,
+    "language": "Python"
   },
   {
     "id": 155,
@@ -15769,7 +17041,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 162,
+    "forks": 28,
+    "language": "JavaScript"
   },
   {
     "id": 154,
@@ -15804,7 +17079,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 5349,
+    "forks": 1182,
+    "language": "HTML"
   },
   {
     "id": 147,
@@ -15843,7 +17121,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 23,
+    "forks": 3,
+    "language": "HTML"
   },
   {
     "id": 146,
@@ -15881,7 +17162,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 31349,
+    "forks": 2713,
+    "language": "Rust"
   },
   {
     "id": 144,
@@ -15920,7 +17204,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 35,
+    "forks": 1,
+    "language": "JavaScript"
   },
   {
     "id": 143,
@@ -15959,7 +17246,10 @@
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 142,
@@ -15999,7 +17289,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 9259,
+    "forks": 617,
+    "language": "C++"
   },
   {
     "id": 141,
@@ -16034,7 +17327,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 61814,
+    "forks": 5359,
+    "language": "Python"
   },
   {
     "id": 136,
@@ -16071,7 +17367,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 135,
@@ -16109,7 +17408,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 30422,
+    "forks": 2070,
+    "language": "C#"
   },
   {
     "id": 134,
@@ -16146,7 +17448,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 14,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 133,
@@ -16168,7 +17473,10 @@
     "repo_details": [],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 132,
@@ -16184,8 +17492,8 @@
     ],
     "views": "2.91K",
     "github_links": [
-      "https://github.com/Ryan-PG/ry-teh-metro-nav",
-      "https://github.com/mostafa-kheibary/tehran-metro-data"
+      "https://github.com/mostafa-kheibary/tehran-metro-data",
+      "https://github.com/Ryan-PG/ry-teh-metro-nav"
     ],
     "tags": [],
     "primary_repo": "Ryan-PG/ry-teh-metro-nav",
@@ -16215,7 +17523,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 131,
@@ -16253,7 +17564,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 85,
+    "forks": 2,
+    "language": "JavaScript"
   },
   {
     "id": 130,
@@ -16290,7 +17604,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 3300,
+    "forks": 194,
+    "language": "Shell"
   },
   {
     "id": 129,
@@ -16325,7 +17642,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1000,
+    "forks": 105,
+    "language": null
   },
   {
     "id": 127,
@@ -16365,7 +17685,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 7121,
+    "forks": 1203,
+    "language": "C++"
   },
   {
     "id": 126,
@@ -16405,7 +17728,10 @@
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 6,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 125,
@@ -16444,7 +17770,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 71409,
+    "forks": 5450,
+    "language": "Python"
   },
   {
     "id": 124,
@@ -16484,7 +17813,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 3,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 123,
@@ -16521,7 +17853,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 754,
+    "forks": 126,
+    "language": "Shell"
   },
   {
     "id": 122,
@@ -16561,7 +17896,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 223,
+    "forks": 22,
+    "language": "Go"
   },
   {
     "id": 121,
@@ -16599,7 +17937,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 3,
+    "forks": 0,
+    "language": "TypeScript"
   },
   {
     "id": 120,
@@ -16637,7 +17978,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 5,
+    "forks": 0,
+    "language": "JavaScript"
   },
   {
     "id": 118,
@@ -16674,7 +18018,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 48,
+    "forks": 4,
+    "language": "JavaScript"
   },
   {
     "id": 117,
@@ -16709,7 +18056,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 89,
+    "forks": 3,
+    "language": "JavaScript"
   },
   {
     "id": 116,
@@ -16747,7 +18097,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 7,
+    "forks": 0,
+    "language": "C#"
   },
   {
     "id": 115,
@@ -16772,7 +18125,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 114,
@@ -16808,7 +18164,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 23619,
+    "forks": 2542,
+    "language": "Jupyter Notebook"
   },
   {
     "id": 112,
@@ -16849,7 +18208,10 @@
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 90,
+    "forks": 6,
+    "language": "Shell"
   },
   {
     "id": 111,
@@ -16889,7 +18251,10 @@
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 1281,
+    "forks": 169,
+    "language": "Swift"
   },
   {
     "id": 110,
@@ -16929,7 +18294,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 18239,
+    "forks": 2552,
+    "language": "Python"
   },
   {
     "id": 109,
@@ -16968,7 +18336,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 244276,
+    "forks": 50188,
+    "language": "Python"
   },
   {
     "id": 108,
@@ -17009,7 +18380,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 8822,
+    "forks": 1318,
+    "language": "HTML"
   },
   {
     "id": 107,
@@ -17047,7 +18421,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 21,
+    "forks": 5,
+    "language": "C#"
   },
   {
     "id": 104,
@@ -17084,7 +18461,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 65905,
+    "forks": 7236,
+    "language": "JavaScript"
   },
   {
     "id": 103,
@@ -17122,7 +18502,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 102,
@@ -17144,7 +18527,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 101,
@@ -17160,8 +18546,8 @@
     ],
     "views": "2.17K",
     "github_links": [
-      "https://github.com/httpie/desktop",
-      "https://github.com/httpie/cli"
+      "https://github.com/httpie/cli",
+      "https://github.com/httpie/desktop"
     ],
     "tags": [],
     "primary_repo": "httpie/cli",
@@ -17191,7 +18577,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 38494,
+    "forks": 3962,
+    "language": "Python"
   },
   {
     "id": 100,
@@ -17230,7 +18619,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 46881,
+    "forks": 2849,
+    "language": "JavaScript"
   },
   {
     "id": 99,
@@ -17268,7 +18660,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 16091,
+    "forks": 781,
+    "language": "TypeScript"
   },
   {
     "id": 98,
@@ -17306,7 +18701,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 97,
@@ -17341,7 +18739,10 @@
     ],
     "categories": [
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 40,
+    "forks": 3,
+    "language": "C#"
   },
   {
     "id": 96,
@@ -17381,7 +18782,10 @@
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه",
       "امنیت، تست نفوذ و پنتست"
-    ]
+    ],
+    "stars": 1821,
+    "forks": 275,
+    "language": "Assembly"
   },
   {
     "id": 95,
@@ -17419,7 +18823,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بات‌های تلگرام و پیام‌رسان"
-    ]
+    ],
+    "stars": 33,
+    "forks": 5,
+    "language": "Python"
   },
   {
     "id": 93,
@@ -17457,7 +18864,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 39,
+    "forks": 6,
+    "language": "TypeScript"
   },
   {
     "id": 92,
@@ -17495,7 +18905,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 404,
+    "forks": 38,
+    "language": "JavaScript"
   },
   {
     "id": 91,
@@ -17517,7 +18930,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 90,
@@ -17544,7 +18960,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 89,
@@ -17579,7 +18998,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 9481,
+    "forks": 359,
+    "language": null
   },
   {
     "id": 88,
@@ -17616,7 +19038,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 100,
+    "forks": 5,
+    "language": "Python"
   },
   {
     "id": 87,
@@ -17652,7 +19077,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 521,
+    "forks": 74,
+    "language": "Python"
   },
   {
     "id": 85,
@@ -17692,7 +19120,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 36,
+    "forks": 5,
+    "language": "TypeScript"
   },
   {
     "id": 84,
@@ -17714,7 +19145,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 83,
@@ -17753,7 +19187,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 82,
@@ -17791,7 +19228,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 12891,
+    "forks": 1109,
+    "language": "TypeScript"
   },
   {
     "id": 81,
@@ -17832,7 +19272,10 @@
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 21,
+    "forks": 0,
+    "language": "HTML"
   },
   {
     "id": 80,
@@ -17857,7 +19300,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 79,
@@ -17895,7 +19341,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 29223,
+    "forks": 2145,
+    "language": "Go"
   },
   {
     "id": 76,
@@ -17932,7 +19381,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1590,
+    "forks": 59,
+    "language": "TypeScript"
   },
   {
     "id": 75,
@@ -17969,7 +19421,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 3862,
+    "forks": 434,
+    "language": "PHP"
   },
   {
     "id": 74,
@@ -18008,7 +19463,10 @@
       "بات‌های تلگرام و پیام‌رسان",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 73,
@@ -18049,7 +19507,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 27,
+    "forks": 1,
+    "language": "C#"
   },
   {
     "id": 72,
@@ -18085,7 +19546,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 2025,
+    "forks": 167,
+    "language": "Python"
   },
   {
     "id": 71,
@@ -18123,7 +19587,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 1822,
+    "forks": 162,
+    "language": "TypeScript"
   },
   {
     "id": 70,
@@ -18159,7 +19626,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 5615,
+    "forks": 371,
+    "language": "TypeScript"
   },
   {
     "id": 69,
@@ -18196,7 +19666,10 @@
       "ابزارهای توسعه و CLI",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 372,
+    "forks": 22,
+    "language": "Go"
   },
   {
     "id": 67,
@@ -18232,7 +19705,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 1286,
+    "forks": 139,
+    "language": "Python"
   },
   {
     "id": 65,
@@ -18270,7 +19746,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 6865,
+    "forks": 889,
+    "language": "TypeScript"
   },
   {
     "id": 64,
@@ -18284,14 +19763,14 @@
     "photos": [],
     "views": "2.19K",
     "github_links": [
-      "https://github.com/AvenCores/open-antigravity-patcher",
-      "https://github.com/AvenCores/open-antigravity-patcher.git"
+      "https://github.com/AvenCores/open-antigravity-patcher.git",
+      "https://github.com/AvenCores/open-antigravity-patcher"
     ],
     "tags": [],
     "primary_repo": "AvenCores/open-antigravity-patcher.git",
     "repo_names": [
-      "AvenCores/open-antigravity-patcher.git",
-      "AvenCores/open-antigravity-patcher"
+      "AvenCores/open-antigravity-patcher",
+      "AvenCores/open-antigravity-patcher.git"
     ],
     "authors": [
       "AvenCores"
@@ -18318,7 +19797,10 @@
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 63,
@@ -18356,7 +19838,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 12,
+    "forks": 7,
+    "language": "JavaScript"
   },
   {
     "id": 62,
@@ -18394,7 +19879,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 16847,
+    "forks": 492,
+    "language": "CSS"
   },
   {
     "id": 61,
@@ -18430,7 +19918,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 1,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 59,
@@ -18466,7 +19957,10 @@
     "categories": [
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 2,
+    "forks": 0,
+    "language": "Shell"
   },
   {
     "id": 58,
@@ -18503,7 +19997,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 10,
+    "forks": 1,
+    "language": "Rust"
   },
   {
     "id": 57,
@@ -18525,7 +20022,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 56,
@@ -18564,7 +20064,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 4,
+    "forks": 0,
+    "language": "Python"
   },
   {
     "id": 55,
@@ -18602,7 +20105,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 5,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 54,
@@ -18638,7 +20144,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 22250,
+    "forks": 1118,
+    "language": "MDX"
   },
   {
     "id": 53,
@@ -18674,7 +20183,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 3246,
+    "forks": 398,
+    "language": "TypeScript"
   },
   {
     "id": 51,
@@ -18712,7 +20224,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 83466,
+    "forks": 11050,
+    "language": null
   },
   {
     "id": 50,
@@ -18750,7 +20265,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 71038,
+    "forks": 7533,
+    "language": null
   },
   {
     "id": 48,
@@ -18789,7 +20307,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 6530,
+    "forks": 1089,
+    "language": "Go"
   },
   {
     "id": 47,
@@ -18829,7 +20350,10 @@
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس",
       "فیلترشکن، پروکسی و شبکه"
-    ]
+    ],
+    "stars": 617,
+    "forks": 41,
+    "language": "Go"
   },
   {
     "id": 46,
@@ -18866,7 +20390,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 42902,
+    "forks": 3480,
+    "language": "C"
   },
   {
     "id": 45,
@@ -18903,7 +20430,10 @@
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 2817,
+    "forks": 285,
+    "language": "Python"
   },
   {
     "id": 44,
@@ -18938,7 +20468,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 7102,
+    "forks": 661,
+    "language": "Python"
   },
   {
     "id": 42,
@@ -18976,7 +20509,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 17,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 41,
@@ -19015,7 +20551,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML"
   },
   {
     "id": 37,
@@ -19054,7 +20593,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "بک‌اند و میکروسرویس"
-    ]
+    ],
+    "stars": 2,
+    "forks": 1,
+    "language": "TypeScript"
   },
   {
     "id": 36,
@@ -19094,7 +20636,10 @@
       "فرانت‌اند و UI",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 17843,
+    "forks": 907,
+    "language": "Kotlin"
   },
   {
     "id": 35,
@@ -19131,7 +20676,10 @@
     ],
     "categories": [
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 15117,
+    "forks": 579,
+    "language": "C#"
   },
   {
     "id": 34,
@@ -19167,7 +20715,10 @@
     "categories": [
       "هوش مصنوعی و یادگیری ماشین",
       "ابزارهای توسعه و CLI"
-    ]
+    ],
+    "stars": 1380,
+    "forks": 77,
+    "language": "TypeScript"
   },
   {
     "id": 33,
@@ -19204,7 +20755,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 828,
+    "forks": 61,
+    "language": "Python"
   },
   {
     "id": 32,
@@ -19226,7 +20780,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 31,
@@ -19264,7 +20821,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 533,
+    "forks": 43,
+    "language": "TypeScript"
   },
   {
     "id": 30,
@@ -19306,7 +20866,10 @@
     ],
     "categories": [
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 16,
+    "forks": 4,
+    "language": "TeX"
   },
   {
     "id": 29,
@@ -19343,7 +20906,10 @@
     ],
     "categories": [
       "هوش مصنوعی و یادگیری ماشین"
-    ]
+    ],
+    "stars": 4112,
+    "forks": 236,
+    "language": "C#"
   },
   {
     "id": 28,
@@ -19384,7 +20950,10 @@
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 2100,
+    "forks": 280,
+    "language": "C#"
   },
   {
     "id": 27,
@@ -19423,7 +20992,10 @@
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI",
       "موبایل و اندروید"
-    ]
+    ],
+    "stars": 8,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 26,
@@ -19460,7 +21032,10 @@
     ],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 138302,
+    "forks": 8005,
+    "language": "TypeScript"
   },
   {
     "id": 25,
@@ -19476,8 +21051,8 @@
     ],
     "views": "1.55K",
     "github_links": [
-      "http://github.com/Devtahas/RedCloud-Android/releases",
-      "http://github.com/Devtahas/RedCloud-windows/releases"
+      "http://github.com/Devtahas/RedCloud-windows/releases",
+      "http://github.com/Devtahas/RedCloud-Android/releases"
     ],
     "tags": [],
     "primary_repo": "Devtahas/RedCloud-windows",
@@ -19510,7 +21085,10 @@
       "موبایل و اندروید",
       "امنیت، تست نفوذ و پنتست",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 24,
+    "forks": 3,
+    "language": "Dart"
   },
   {
     "id": 24,
@@ -19532,7 +21110,10 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 20,
@@ -19569,7 +21150,10 @@
     ],
     "categories": [
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 4580,
+    "forks": 326,
+    "language": "Python"
   },
   {
     "id": 19,
@@ -19608,7 +21192,10 @@
       "فرانت‌اند و UI",
       "بک‌اند و میکروسرویس",
       "داده، اسکراپینگ و اتوماسیون"
-    ]
+    ],
+    "stars": 89,
+    "forks": 28,
+    "language": "TypeScript"
   },
   {
     "id": 18,
@@ -19644,7 +21231,10 @@
     "categories": [
       "بک‌اند و میکروسرویس",
       "لینوکس و سیستم‌عامل"
-    ]
+    ],
+    "stars": 5,
+    "forks": 1,
+    "language": "Python"
   },
   {
     "id": 16,
@@ -19669,7 +21259,10 @@
     "categories": [
       "ابزارهای توسعه و CLI",
       "فرانت‌اند و UI"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   },
   {
     "id": 1,
@@ -19691,6 +21284,9 @@
     "repo_details": [],
     "categories": [
       "سایر پروژه‌ها"
-    ]
+    ],
+    "stars": 0,
+    "forks": 0,
+    "language": null
   }
 ]
