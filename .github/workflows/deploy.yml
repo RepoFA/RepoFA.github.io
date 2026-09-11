@@ -34,7 +34,9 @@ jobs:
         run: |
           pip install beautifulsoup4
 
-      - name: Sync Telegram Posts
+      - name: Sync Telegram Posts & GitHub Stars
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/sync_telegram.py
 

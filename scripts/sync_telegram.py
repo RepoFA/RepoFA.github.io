@@ -25,6 +25,84 @@ CATEGORIES_MAP = {
     'داده، اسکراپینگ و اتوماسیون': ['اسکرپ', 'اسکراپ', 'crawl', 'scraper', 'اتوماسیون', 'automation', 'داده', 'data', 'سلنیوم', 'selenium', 'پانداز', 'pandas']
 }
 
+def fetch_github_stars(repo_list):
+    """Fetch stars and forks using GitHub GraphQL API with token or fallback to REST"""
+    token = os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
+    
+    # Try getting token from gh CLI if available locally
+    if not token:
+        try:
+            import subprocess
+            res = subprocess.run(['gh', 'auth', 'token'], capture_output=True, text=True)
+            if res.returncode == 0 and res.stdout.strip():
+                token = res.stdout.strip()
+        except Exception:
+            pass
+
+    stats = {}
+    if not repo_list:
+        return stats
+
+    if token:
+        print(f'Fetching GitHub stats via GraphQL for {len(repo_list)} repos...')
+        chunk_size = 40
+        for i in range(0, len(repo_list), chunk_size):
+            chunk = repo_list[i:i+chunk_size]
+            query_parts = []
+            for idx, r in enumerate(chunk):
+                parts = r.split('/')
+                if len(parts) != 2:
+                    continue
+                owner, name = parts[0], parts[1]
+                alias = f'repo_{idx}'
+                query_parts.append(f'{alias}: repository(owner: "{owner}", name: "{name}") {{ nameWithOwner stargazerCount forks {{ totalCount }} primaryLanguage {{ name }} }}')
+            
+            if not query_parts:
+                continue
+                
+            query = 'query { ' + ' '.join(query_parts) + ' }'
+            req_data = json.dumps({'query': query}).encode('utf-8')
+            req = urllib.request.Request(
+                'https://api.github.com/graphql',
+                data=req_data,
+                headers={
+                    'Authorization': f'Bearer {token}',
+                    'User-Agent': 'RepoFA-Bot',
+                    'Content-Type': 'application/json'
+                }
+            )
+            try:
+                with urllib.request.urlopen(req, context=ctx) as resp:
+                    res_json = json.loads(resp.read().decode('utf-8'))
+                    for k, v in res_json.get('data', {}).items():
+                        if v and 'nameWithOwner' in v:
+                            stats[v['nameWithOwner'].lower()] = {
+                                'stars': v.get('stargazerCount', 0),
+                                'forks': v.get('forks', {}).get('totalCount', 0),
+                                'language': v.get('primaryLanguage', {}).get('name') if v.get('primaryLanguage') else None
+                            }
+            except Exception as e:
+                print(f'GraphQL chunk error: {e}')
+    else:
+        print('No GitHub token found, attempting unauthenticated REST fetch for sample...')
+        for r in repo_list[:30]:
+            try:
+                req = urllib.request.Request(
+                    f'https://api.github.com/repos/{r}',
+                    headers={'User-Agent': 'RepoFA-Bot'}
+                )
+                with urllib.request.urlopen(req, context=ctx) as resp:
+                    data = json.loads(resp.read().decode('utf-8'))
+                    stats[r.lower()] = {
+                        'stars': data.get('stargazers_count', 0),
+                        'forks': data.get('forks_count', 0),
+                        'language': data.get('language')
+                    }
+            except Exception:
+                pass
+
+    return stats
+
 def sync_channel():
     all_posts = []
     before = None
@@ -34,6 +112,22 @@ def sync_channel():
     os.makedirs('data', exist_ok=True)
     os.makedirs('src', exist_ok=True)
     
+    # Load existing posts to preserve cached stars if GitHub API is rate limited
+    existing_stars = {}
+    if os.path.exists('data/posts.json'):
+        try:
+            with open('data/posts.json', 'r', encoding='utf-8') as f:
+                old_posts = json.load(f)
+                for p in old_posts:
+                    if p.get('primary_repo'):
+                        existing_stars[p['primary_repo'].lower()] = {
+                            'stars': p.get('stars', 0),
+                            'forks': p.get('forks', 0),
+                            'language': p.get('language')
+                        }
+        except Exception:
+            pass
+
     while True:
         target_url = f'{url}?before={before}' if before else url
         req = urllib.request.Request(target_url, headers=headers)
@@ -144,7 +238,10 @@ def sync_channel():
                 'authors': list(dict.fromkeys(authors)),
                 'primary_author': authors[0] if authors else None,
                 'repo_details': repo_details,
-                'categories': detected_cats
+                'categories': detected_cats,
+                'stars': 0,
+                'forks': 0,
+                'language': None
             })
             batch_new += 1
             
@@ -153,6 +250,23 @@ def sync_channel():
         before = min_id
 
     if all_posts:
+        # Collect unique primary repos for stats fetch
+        unique_repos = list(set([p['primary_repo'] for p in all_posts if p.get('primary_repo')]))
+        fetched_stats = fetch_github_stars(unique_repos)
+        
+        # Merge fetched stats or fallback to existing cached stats
+        for p in all_posts:
+            if p.get('primary_repo'):
+                key = p['primary_repo'].lower()
+                if key in fetched_stats:
+                    p['stars'] = fetched_stats[key]['stars']
+                    p['forks'] = fetched_stats[key]['forks']
+                    p['language'] = fetched_stats[key]['language']
+                elif key in existing_stars:
+                    p['stars'] = existing_stars[key]['stars']
+                    p['forks'] = existing_stars[key]['forks']
+                    p['language'] = existing_stars[key]['language']
+
         all_posts.sort(key=lambda x: x['id'], reverse=True)
         with open('data/posts.json', 'w', encoding='utf-8') as f:
             json.dump(all_posts, f, ensure_ascii=False, indent=2)
@@ -160,7 +274,7 @@ def sync_channel():
         with open('src/posts_data.json', 'w', encoding='utf-8') as f:
             json.dump(all_posts, f, ensure_ascii=False, indent=2)
             
-        print(f'Successfully synced {len(all_posts)} posts.')
+        print(f'Successfully synced {len(all_posts)} posts with GitHub stars & forks.')
     else:
         print('No posts fetched, keeping existing data.')
 
